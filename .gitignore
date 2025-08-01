@@ -1,0 +1,41 @@
+# .gitignore
+# ignore everything in the root except the "wp-content" directory.
+wp-admin/
+wp-includes/
+!wp-content/
+
+# ignore everything in the "wp-content" directory, except:
+# "mu-plugins", "plugins", "themes" directory
+wp-content/*
+!wp-content/themes/
+
+# ignore these plugins
+wp-content/plugins/hello.php
+wp-content/themes/index.php
+
+# ignore specific themes
+wp-content/themes/twenty*/
+
+# ignore node dependency directories
+node_modules/
+
+# ignore HTML folder
+wp-content/themes/*/html/
+
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite
+*.zip
+license.txt
+readme.html
+wp-*.php
+local-xdebuginfo.php
+xmlrpc.php
+.htaccess
+
+# ignore Macintosh .DS_Store
+.DS_Store
+
+# Prepros config file
+prepros.config
