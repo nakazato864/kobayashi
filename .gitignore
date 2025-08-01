@@ -35,7 +35,7 @@ xmlrpc.php
 .htaccess
 
 # ignore Macintosh .DS_Store
-.DS_Store
+*.DS_Store
 
 # Prepros config file
 prepros.config
