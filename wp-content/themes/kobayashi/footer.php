@@ -1,14 +1,34 @@
 <?php
 /**
- * This file's content is located in /lib/templates/structure/footer.php and should
- * only be overwritten via your child theme.
+ * The template for displaying the footer
  *
- * We strongly recommend to read the Beans documentation to find out more about
- * how to customize the Beans theme.
+ * Contains the closing of the #content div and all content after.
  *
- * @author Beans
- * @link   https://www.getbeans.io
- * @package Beans\Framework
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package kobayashi
  */
 
-beans_load_default_template( __FILE__ );
+?>
+
+	<footer id="colophon" class="site-footer">
+		<div class="site-info">
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'kobayashi' ) ); ?>">
+				<?php
+				/* translators: %s: CMS name, i.e. WordPress. */
+				printf( esc_html__( 'Proudly powered by %s', 'kobayashi' ), 'WordPress' );
+				?>
+			</a>
+			<span class="sep"> | </span>
+				<?php
+				/* translators: 1: Theme name, 2: Theme author. */
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'kobayashi' ), 'kobayashi', '<a href="http://underscores.me/">Underscores.me</a>' );
+				?>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<?php wp_footer(); ?>
+
+</body>
+</html>

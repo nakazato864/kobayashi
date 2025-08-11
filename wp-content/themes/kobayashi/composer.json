@@ -1,75 +1,35 @@
 {
-  "name": "beans/beans",
-  "description": "The most innovative theme for WordPress. The real magic is under the hood.",
-  "type": "wordpress-theme",
-  "license": "GPL-2.0+",
-  "homepage": "http://www.getbeans.io/",
-  "support": {
-    "issues": "https://github.com/GetBeans/Beans/issues",
-    "source": "https://github.com/GetBeans/Beans"
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "autoload": {
-    "exclude-from-classmap": [
-      "/tests/"
-    ]
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Beans\\Framework\\Tests\\Unit\\": "tests/phpunit/unit/",
-      "Beans\\Framework\\Tests\\Integration\\": "tests/phpunit/integration/"
-    }
-  },
-  "repositories": [
-    {
-      "type": "package",
-      "package": {
-      "name": "xwp/wp-dev-lib",
-      "version": "1.0.1",
-        "source": {
-          "url": "https://github.com/xwp/wp-dev-lib.git",
-          "type": "git",
-          "reference": "master"
+    "name": "automattic/underscores",
+    "type": "wordpress-theme",
+    "description": "Hi. I'm a starter theme called _s, or underscores, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.",
+    "keywords": [
+        "WordPress",
+        "Themes"
+    ],
+    "homepage": "https://github.com/Automattic/_s",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Contributors",
+            "homepage": "https://github.com/Automattic/_s/graphs/contributors"
         }
-      }
+    ],
+    "require": {
+        "php": ">=5.6"
+    },
+    "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
+        "wptrt/wpthemereview": "^0.2.1",
+        "php-parallel-lint/php-parallel-lint": "^1.2.0",
+        "wp-cli/i18n-command": "^2.2.5"
+    },
+    "scripts": {
+        "lint:wpcs": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs",
+        "lint:php": "@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor .",
+        "make-pot": "wp i18n make-pot . languages/_s.pot"
+    },
+    "support": {
+        "issues": "https://github.com/Automattic/_s/issues",
+        "source": "https://github.com/Automattic/_s"
     }
-  ],
-  "require": {
-    "php": "^5.2|^7",
-    "composer/installers": "^1.4",
-    "roave/security-advisories": "dev-master"
-  },
-  "require-dev": {
-    "php": "^5.6|^7",
-    "brain/monkey": "^2.2",
-    "dealerdirect/phpcodesniffer-composer-installer": "^0.4.4",
-    "mikey179/vfsStream": "^1.6",
-    "phpunit/phpunit": "~5.7.9",
-    "sirbrillig/phpcs-variable-analysis": "^2.0",
-    "squizlabs/php_codesniffer": "^3.2",
-    "wimg/php-compatibility": "^8.0",
-    "wp-coding-standards/wpcs": "^0.14.1",
-    "xwp/wp-dev-lib": "^1.0.1"
-  },
-  "config": {
-    "sort-order": true
-  },
-  "scripts": {
-    "install-codestandards": [
-      "Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin::run"
-    ],
-    "phpcs-src": "\"vendor/bin/phpcs\"",
-    "phpcs-tests": "\"vendor/bin/phpcs\" --runtime-set testVersion 5.6 tests/phpunit/",
-    "run-phpcs": [
-      "@phpcs-src",
-      "@phpcs-tests"
-    ],
-    "test-unit": "\"vendor/bin/phpunit\" --testsuite unit --color=always",
-    "test-integration": "\"vendor/bin/phpunit\" --testsuite integration --configuration tests/phpunit/integration/phpunit.xml.dist --color=always",
-    "run-tests": [
-      "@test-unit",
-      "@test-integration"
-    ]
-  }
 }

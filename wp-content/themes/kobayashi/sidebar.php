@@ -1,11 +1,17 @@
 <?php
 /**
- * The primary sidebar is set in sidebar-primary.php so that we can have control over the layout. Do
- * not overwrite this file.
+ * The sidebar containing the main widget area
  *
- * @author Beans
- * @link   https://www.getbeans.io
- * @package Beans\Framework
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package kobayashi
  */
 
-// See sidebar-primary.php.
+if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+	return;
+}
+?>
+
+<aside id="secondary" class="widget-area">
+	<?php dynamic_sidebar( 'sidebar-1' ); ?>
+</aside><!-- #secondary -->
