@@ -1,0 +1,464 @@
+@use "sass:math";
+@use "variables" as *;
+
+//==================================================
+//	BODY
+//==================================================
+body{
+	color: $Text-500;
+	font-family: $font;
+	font-size: $baseFontsize+px;
+	font-weight: 400;
+	line-height: 1.75em;
+	background-color: $BG-color;
+}
+
+main.site-main{
+	margin-bottom: rem(60);
+	padding-top: rem(84);
+@include media(md){
+	margin-bottom: rem(80);
+	padding-top: rem(84);
+}
+@include media(lg){
+	margin-bottom: rem(120);
+	padding-top: rem(102);
+}
+@include media(xl){
+	padding-top: rem(98);
+}
+
+h1{
+	margin-bottom: 2rem;
+	font-size: rem(24);
+	font-weight: 600;
+	>small{
+		font-family: $fn-Fredoka;
+		font-size: rem(14);
+		font-weight: 500;
+		text-transform: capitalize;
+	}
+@include media(lg){
+	margin-bottom: rem(60);
+	font-size: rem(32);
+	>small{
+		font-size: rem(18);
+	}
+}
+}
+
+p{
+	color: $Text-400;
+	font-size: rem(16);
+	line-height: 1.75em;
+@include media(lg){
+	font-size: rem(18);
+}
+}
+
+}
+
+//==================================================
+//	HEADER
+//==================================================
+header.site_header{
+	width: 100%;
+	position: fixed;
+	z-index: 1000;
+
+	.site_header_inner{
+		width: calc(100% - 1rem);
+		max-width: 96rem;
+		margin: .5rem;
+		padding: 1rem rem(20);
+		background-color: $White;
+		box-shadow: 0 4px 12px -4px rgba($Black, 0.08);
+		border-radius: 0.5rem;
+		transition: all 0.4s;
+	}
+	.site_branding{
+		>h1{
+			width: calc( math.div(176, 319) * 100%);
+			max-width: 200px;
+			position: relative;
+			&::before{
+				content: '';
+				display: block;
+				width: 100%;
+				height: 100%;
+				background: url(../images/logo_Kobayashi_wh.svg) 0 0 no-repeat;
+				background-size: contain;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 1;
+				opacity: 0;
+				transition: all 0.4s;
+			}
+			img{
+				position: relative;
+				z-index: 2;
+				transition: all 0.4s;
+			}
+		}
+		.btn_menu{
+			width: rem(36);
+			height: rem(36);
+			position: relative;
+			cursor: pointer;
+			span{
+				display: block;
+				width: rem(20);
+				height: 2px;
+				background-color: $Text-400;
+				border-radius: 1px;
+				position: absolute;
+				left: 8px;
+				transition: all 0.4s;
+
+				&:nth-of-type(1){ top: 10px; }
+				&:nth-of-type(2){ top: 17px; }
+				&:nth-of-type(3){ top: 24px; }
+			}
+
+			&.active{
+				span{
+					background-color: $White;
+					&:nth-of-type(1){
+						width: calc(rem(16) * 1.414);
+						transform: translateY(8px) rotate(-45deg);
+						left: 7px;
+						top: 9px;
+					}
+					&:nth-of-type(2){
+						opacity: 0;
+					}
+					&:nth-of-type(3){
+						width: calc(rem(16) * 1.414);
+						transform: translateY(-8px) rotate(45deg);
+						left: 7px;
+						top: 25px;
+					}
+				}
+			}
+		}
+	}
+
+	.main_navigation{
+		display: none;
+		margin-top: rem(64);
+		color: $White;
+
+		&_list{
+			li{
+				border-bottom: 1px solid rgba($White, 0.2);
+				a{
+					display: block;
+					padding: rem(14) 1rem rem(14) 0;
+					font-weight: 600;
+					line-height: 1.5em;
+					background: url(../images/icon/arrow_forward_ios_24dp.svg) 100% 50% no-repeat;
+					background-size: rem(16);
+				}
+			}
+		}
+	}
+
+	.sub_navigation_list{
+		margin-top: 2rem;
+		font-size: rem(14);
+		li{
+			// margin-bottom: rem(4);
+			a{
+				display: flex;
+				align-items: center;
+				gap: 0.5rem;
+				padding-top: rem(4);
+				padding-bottom: rem(4);
+				font-weight: 300;
+				line-height: 1.5em;
+
+				&::after{
+					content: '';
+					display: block;
+					width: 12px;
+					height: 12px;
+					background: url(../images/icon/arrow_forward_ios_24dp.svg) 50% 50% no-repeat;
+					background-size: contain;
+				}
+			}
+		}
+	}
+
+	&.panelActive{
+		height: 100dvh;
+		overflow-y: scroll;
+
+		.site_header_inner{
+			background: $Pink url(../images/common/bg_noise.png) 0 0 repeat;
+			background-size: 500px 287px;
+			box-shadow: 0 4px 12px -4px rgba($Black, 0.08);
+		}
+
+		.site_branding{
+			>h1{
+				&::before{ opacity: 1; }
+				img{ opacity: 0; }
+			}
+		}
+	}
+
+@include media(md){
+	.site_header_inner{
+		padding-left: 2rem;
+		padding-right: rem(20);
+	}
+	.site_branding{
+		>h1{
+			width: 240px;
+			max-width: initial;
+		}
+		.btn_menu{
+			width: rem(40);
+			height: rem(40);
+			span{
+				width: rem(24);
+				&:nth-of-type(1){ top: 11px; }
+				&:nth-of-type(2){ top: 19px; }
+				&:nth-of-type(3){ top: 27px; }
+			}
+			&.active{
+				span{
+					&:nth-of-type(1){
+						width: calc(rem(20) * 1.414);
+					}
+					&:nth-of-type(3){
+						width: calc(rem(20) * 1.414);
+					}
+				}
+			}
+		}
+	}
+}
+
+@include media(lg){
+	.site_branding{
+		>h1{ width: 180px; }
+		.btn_menu{ display: none; }
+	}
+	.main_navigation{
+		display: flex;
+		margin-top: 0;
+		color: $Text-500;
+		&_list{
+			width: 100%;
+			// gap: 10px;
+			font-size: rem(15);
+			&::after{
+				content: '';
+				display: block;
+				width: 1px;
+				height: 100%;
+				margin-right: rem(16);
+				margin-left: rem(6);
+				background-color: $Text-100;
+				transform: rotate(15deg);
+			}
+			li{
+				border-bottom: none;
+				a{
+					padding: 8px 0;
+					text-box: trim-both text;
+					background: none;
+					transition: all 0.2s;
+					&:hover{
+						color: $Pink;
+					}
+				}
+			}
+		}
+	}
+	.sub_navigation_list{
+		min-width: 6em;
+		margin-top: 0;
+		font-size: rem(13.5);
+		li{
+			a{
+				padding: 0;
+				font-weight: 500;
+				line-height: 1.2em;
+				transition: all 0.2s;
+				&::after{ display: none; }
+				&:hover{
+					color: $Pink;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+@include media(xl){
+	.site_header_inner{
+		margin-right: auto;
+		margin-left: auto;
+		padding-top: rem(20);
+		padding-bottom: rem(20);
+		padding-right: rem(24);
+	}
+	.site_branding{
+		>h1{ width: 240px; }
+	}
+	.main_navigation{
+		&_list{
+			width: 100%;
+			gap: 24px;
+			font-size: rem(16);
+			&::after{
+				margin-right: rem(20);
+				margin-left: 0;
+			}
+		}
+	}
+	.sub_navigation_list{
+		min-width: 10em;
+	}
+}
+
+@include media(xxl){
+	.main_navigation_list{
+		gap: 32px;
+	}
+}
+}
+
+//==================================================
+//	FOOTER
+//==================================================
+footer.site_footer{
+	color: $White;
+	background: $Pink url(../images/common/bg_noise.png) 0 0 repeat;
+	background-size: 500px 287px;
+
+	.footer_navgation{
+		border-top: 1px solid rgba($White, 0.2);
+		border-bottom: 1px solid rgba($White, 0.2);
+
+		&_list{
+			// gap: 1rem rem(24);
+			li{
+				width: calc(50% - rem(12));
+				a{
+					display: block;
+					padding: rem(8) rem(22) rem(8) 0;
+					background: url(../images/icon/arrow_forward_ios_24dp.svg) 100% 50% no-repeat;
+					background-size: rem(14);
+					transition: all 0.3s;
+					&:hover{
+						color: $White;
+						font-weight: bolder;
+					}
+				}
+			}
+		}
+		.footer_sub_navgation{
+			li a{
+				display: inline-block;
+				font-weight: 300;
+				transition: all 0.3s;
+				&::after{
+					content: '';
+					display: inline-block;
+					width: 12px;
+					height: 12px;
+					margin-left: 8px;
+					background: url(../images/icon/arrow_forward.svg) 50% 50% no-repeat;
+					background-size: contain;
+				}
+				&:hover{
+					color: $White;
+					font-weight: bolder;
+				}
+			}
+		}
+	}
+	.office{
+		.txt_tel, .txt_fax{
+			font-family: $fn-Manrope;
+		}
+	}
+
+@include media(md){
+	padding: rem(60) 0;
+	.footer_navgation{
+		&_list li{
+			width: calc(50% - rem(16));
+		}
+	}
+}
+
+@include media(lg){
+	.inner_footer_nav{
+		border-top: 1px solid rgba($White, 0.2);
+		border-bottom: 1px solid rgba($White, 0.2);
+	}
+	.footer_navgation{
+		border: none;
+	}
+}
+
+@include media(xl){
+	.footer_navgation{
+		&_list li{
+			width: calc(40% - rem(16));
+		}
+	}
+}
+}
+
+
+.area_fixed{
+	right: 0;
+	bottom: rem(60);
+	.btn_chatbot, .btn_pagetop{
+		a{
+			display: block;
+			padding: rem(12) rem(12) rem(12) rem(16);
+			border-radius: 50% 0 0 50%;
+			box-shadow: 0 16px 32px -4px rgba(12, 12, 13, 0.10), 0 4px 4px -4px rgba(12, 12, 13, 0.05);
+			img{ width: rem(24); }
+		}
+	}
+	.btn_chatbot{
+		a{ background-color: $Scooter;}
+	}
+	.btn_pagetop{
+		a{ background-color: $Picton-Blue;}
+	}
+
+@include media(lg){
+	bottom: rem(80);
+	.btn_chatbot, .btn_pagetop{
+		a{
+			padding: rem(16) rem(16) rem(16) rem(20);
+			img{ width: rem(32); }
+		}
+	}
+}
+}
+
+//==================================================
+//	SECTION
+//==================================================
+.color01{
+	h1>small{ color: $Pink; }
+}
+.color02{
+	h1>small{ color: $Scooter; }
+}
+.color03{
+	h1>small{ color: $Orange; }
+}
+.color04{
+	h1>small{ color: $Picton-Blue; }
+}

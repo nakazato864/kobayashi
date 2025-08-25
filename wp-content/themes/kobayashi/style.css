@@ -3,7 +3,7 @@ Theme Name: kobayashi
 Theme URI: http://underscores.me/
 Author: Underscores.me
 Author URI: http://underscores.me/
-Description: Description
+Description: 株式会社こばやし　オリジナルサイトテーマ
 Version: 1.0.0
 Tested up to: 5.4
 Requires PHP: 5.6
@@ -67,7 +67,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 html {
-	line-height: 1.15;
+	line-height: 1.75em;
 	-webkit-text-size-adjust: 100%;
 }
 
@@ -88,14 +88,6 @@ main {
 	display: block;
 }
 
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
-h1 {
-	font-size: 2em;
-	margin: 0.67em 0;
-}
 
 /* Grouping content
 	 ========================================================================== */
@@ -209,7 +201,6 @@ select,
 textarea {
 	font-family: inherit;
 	font-size: 100%;
-	line-height: 1.15;
 	margin: 0;
 }
 
