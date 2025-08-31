@@ -11,9 +11,21 @@ body{
 	font-weight: 400;
 	line-height: 1.75em;
 	background-color: $BG-color;
+
+	a:visited{
+		color: inherit;
+	}
+	p{
+		color: $Text-400;
+		font-size: rem(16);
+		line-height: 1.75em;
+		@include media(lg){
+			font-size: rem(18);
+		}
+	}
 }
 
-main.site-main{
+main{
 	margin-bottom: rem(60);
 	padding-top: rem(84);
 @include media(md){
@@ -26,33 +38,58 @@ main.site-main{
 }
 @include media(xl){
 	padding-top: rem(98);
+	.container{
+		max-width: 1280px;
+	}
 }
 
-h1{
+hgroup{
 	margin-bottom: 2rem;
-	font-size: rem(24);
-	font-weight: 600;
-	>small{
-		font-family: $fn-Fredoka;
-		font-size: rem(14);
-		font-weight: 500;
-		text-transform: capitalize;
+	h1{
+		font-size: rem(24);
+		font-weight: 600;
+		position: relative;
+		z-index: 10;
+		>small{
+			font-family: $fn-Fredoka;
+			font-size: rem(14);
+			font-weight: 500;
+			text-transform: capitalize;
+		}
+		&::before{
+			content: '';
+			display: block;
+			width: 132px;
+			height: 132px;
+			// background-color: rgba($Pink, 0.2);
+			animation: fluidrotate 24s ease 0s infinite;
+			position: absolute;
+			top: 50%;
+			left: 60%;
+			transform: translateY(-50%);
+			z-index: 1;
+		}
 	}
 @include media(lg){
 	margin-bottom: rem(60);
-	font-size: rem(32);
-	>small{
-		font-size: rem(18);
+	h1{
+		font-size: rem(32);
+		>small{
+			font-size: rem(18);
+		}
+		&::before{
+			width: 160px;
+			height: 160px;
+		}
 	}
 }
-}
-
-p{
-	color: $Text-400;
-	font-size: rem(16);
-	line-height: 1.75em;
-@include media(lg){
-	font-size: rem(18);
+@include media(xl){
+	h1{
+		&::before{
+			width: 180px;
+			height: 180px;
+		}
+	}
 }
 }
 
@@ -307,7 +344,10 @@ header.site_header{
 		padding-right: rem(24);
 	}
 	.site_branding{
-		>h1{ width: 240px; }
+		>h1{
+			width: calc(220 / 1280 * 100vw);
+			max-width: 240px;
+		}
 	}
 	.main_navigation{
 		&_list{
@@ -339,6 +379,8 @@ footer.site_footer{
 	color: $White;
 	background: $Pink url(../images/common/bg_noise.png) 0 0 repeat;
 	background-size: 500px 287px;
+
+	p{ color: $White; }
 
 	.footer_navgation{
 		border-top: 1px solid rgba($White, 0.2);
@@ -413,6 +455,9 @@ footer.site_footer{
 			width: calc(40% - rem(16));
 		}
 	}
+	.container{
+		max-width: 1280px;
+	}
 }
 }
 
@@ -420,6 +465,7 @@ footer.site_footer{
 .area_fixed{
 	right: 0;
 	bottom: rem(60);
+	z-index: 800;
 	.btn_chatbot, .btn_pagetop{
 		a{
 			display: block;
@@ -448,17 +494,104 @@ footer.site_footer{
 }
 
 //==================================================
+//	button
+//==================================================
+.btn_priority{
+	>a{
+		display: block;
+		padding: rem(20) rem(60) rem(20) rem(40);
+		color: $White;
+		font-size: rem(18);
+		font-weight: 700;
+		border-radius: 100px;
+		position: relative;
+		transition: all 0.2s;
+		&::after{
+			content: '';
+			display: block;
+			width: 24px;
+			height: 24px;
+			background: url(../images/icon/arrow_right.svg) 0 0 no-repeat;
+			background-size: contain;
+			position: absolute;
+			right: rem(20);
+			top: 50%;
+			transform: translateY(-50%);
+			transition: all 0.2s;
+		}
+		&:hover{
+			&::after{
+				right: rem(12);
+			}
+		}
+		&:visited{ color: $White; }
+	}
+}
+
+//==================================================
 //	SECTION
 //==================================================
 .color01{
-	h1>small{ color: $Pink; }
+	hgroup{
+		h1{
+			&::before{
+				background-color: rgba($Pink, 0.2);
+			}
+			>small{ color: $Pink; }
+		}
+	}
+	.btn_priority >a{
+		background-color: $Pink;
+		&:hover{
+			background-color: rgba($Pink, 0.9);
+		}
+	}
 }
 .color02{
-	h1>small{ color: $Scooter; }
+	hgroup{
+		h1{
+			&::before{
+				background-color: rgba($Scooter, 0.2);
+			}
+			>small{ color: $Scooter; }
+		}
+	}
+	.btn_priority >a{
+		background-color: $Scooter;
+		&:hover{
+			background-color: rgba($Scooter, 0.9);
+		}
+	}
 }
 .color03{
-	h1>small{ color: $Orange; }
+	hgroup{
+		h1{
+			&::before{
+				background-color: rgba($Orange, 0.2);
+			}
+			>small{ color: $Orange; }
+		}
+	}
+	.btn_priority >a{
+		background-color: $Orange;
+		&:hover{
+			background-color: rgba($Orange, 0.9);
+		}
+	}
 }
 .color04{
-	h1>small{ color: $Picton-Blue; }
+	hgroup{
+		h1{
+			&::before{
+				background-color: rgba($Picton-Blue, 0.2);
+			}
+			>small{ color: $Picton-Blue; }
+		}
+	}
+	.btn_priority >a{
+		background-color: $Picton-Blue;
+		&:hover{
+			background-color: rgba($Picton-Blue, 0.9);
+		}
+	}
 }

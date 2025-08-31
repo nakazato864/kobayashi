@@ -19,9 +19,7 @@ function mediaQueriesWin(){
 		$("#site-navigation").removeAttr('style');
 	}
 }
-$(window).resize(function() {
-	mediaQueriesWin();
-});
-$(window).on('load',function(){
+
+$(window).on('load resize',function(){
 	mediaQueriesWin();
 });
