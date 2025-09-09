@@ -19,6 +19,7 @@ body{
 		color: $Text-400;
 		font-size: rem(16);
 		line-height: 1.75em;
+		text-align: justify;
 		@include media(lg){
 			font-size: rem(18);
 		}
@@ -65,9 +66,8 @@ hgroup{
 			animation: fluidrotate 24s ease 0s infinite;
 			position: absolute;
 			top: 50%;
-			left: 60%;
 			transform: translateY(-50%);
-			z-index: 1;
+			z-index: -100;
 		}
 	}
 @include media(lg){
@@ -382,6 +382,10 @@ footer.site_footer{
 
 	p{ color: $White; }
 
+	.site_footer_logo img{
+		width: 220px;
+	}
+
 	.footer_navgation{
 		border-top: 1px solid rgba($White, 0.2);
 		border-bottom: 1px solid rgba($White, 0.2);
@@ -432,6 +436,9 @@ footer.site_footer{
 
 @include media(md){
 	padding: rem(60) 0;
+	.site_footer_logo img{
+		width: 240px;
+	}
 	.footer_navgation{
 		&_list li{
 			width: calc(50% - rem(16));
@@ -440,6 +447,9 @@ footer.site_footer{
 }
 
 @include media(lg){
+	.site_footer_logo img{
+		width: 280px;
+	}
 	.inner_footer_nav{
 		border-top: 1px solid rgba($White, 0.2);
 		border-bottom: 1px solid rgba($White, 0.2);
@@ -503,6 +513,7 @@ footer.site_footer{
 		color: $White;
 		font-size: rem(18);
 		font-weight: 700;
+		text-align: center;
 		border-radius: 100px;
 		position: relative;
 		transition: all 0.2s;
@@ -526,6 +537,10 @@ footer.site_footer{
 		}
 		&:visited{ color: $White; }
 	}
+
+@include media(lg){
+	>a{ min-width: rem(240);}
+}
 }
 
 //==================================================
