@@ -85,40 +85,125 @@ get_header();
 	<ul class="grid grid-cols-2 gap-4 mb-8 md:grid-cols-4 md:gap-5 lg:gap-8 lg:mb-14">
 		<li class=""><a href="#">
 			<img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/img_service01.png" alt="居宅介護支援">
-			<p class="mt-3 lg:mt-4 lg:text-center">居宅介護支援</p>
+			<p class="mt-3 text-left lg:mt-4 lg:text-center">居宅介護支援</p>
 		</a></li>
 		<li class=""><a href="#">
 			<img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/img_service02.png" alt="訪問介護（ヘルパーステーション）">
-			<p class="mt-3 lg:mt-4 lg:text-center">訪問介護<br><small class="text-sm">（ヘルパーステーション）</small></p>
+			<p class="mt-3 text-left lg:mt-4 lg:text-center">訪問介護<br><small class="text-sm">（ヘルパーステーション）</small></p>
 		</a></li>
 		<li class=""><a href="#">
 			<img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/img_service03.png" alt="訪問看護">
-			<p class="mt-3 lg:mt-4 lg:text-center">訪問看護</p>
+			<p class="mt-3 text-left lg:mt-4 lg:text-center">訪問看護</p>
 		</a></li>
 		<li class=""><a href="#">
 			<img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/img_service04.png" alt="デイサービス">
-			<p class="mt-3 lg:mt-4 lg:text-center">デイサービス</p>
+			<p class="mt-3 text-left lg:mt-4 lg:text-center">デイサービス</p>
 		</a></li>
 		<li class=""><a href="#">
 			<img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/img_service05.png" alt="小規模多機能ホーム">
-			<p class="mt-3 lg:mt-4 lg:text-center">小規模<span class="inline-block">多機能ホーム</span></p>
+			<p class="mt-3 text-left lg:mt-4 lg:text-center">小規模<span class="inline-block">多機能ホーム</span></p>
 		</a></li>
 		<li class=""><a href="#">
 			<img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/img_service06.png" alt="サービス付高齢者住宅">
-			<p class="mt-3 lg:mt-4 lg:text-center">サービス付<span class="lg:inline-block">高齢者住宅</span></p>
+			<p class="mt-3 text-left lg:mt-4 lg:text-center">サービス付<span class="lg:inline-block">高齢者住宅</span></p>
 		</a></li>
 		<li class=""><a href="#">
 			<img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/img_service07.png" alt="介護タクシー">
-			<p class="mt-3 lg:mt-4 lg:text-center">介護タクシー</p>
+			<p class="mt-3 text-left lg:mt-4 lg:text-center">介護タクシー</p>
 		</a></li>
 	</ul>
 	<div class="btn_priority flex justify-center"><a href="/service/">事業サービスへ</a></div>
 </section>
 
-<section class="sect_faq color03 container mb-20 mx-auto px-6 md:px-4 lg:mb-[100px] lg:px-5">
+<section class="sect_faq color03 container mb-20 mx-auto px-6 md:px-4 lg:mb-[6.25rem] lg:px-5 xl:mb-[7.5rem]">
 	<hgroup class="mb-8 text-center lg:mb-14">
 		<h1 class="inline-block">よくある質問<small class="block">faq</small></h1>
 	</hgroup>
+	<div class="box_faq mb-5 p-4 rounded-2xl md:p-6 md:mb-6 lg:p-8 lg:mb-8 xl:w-5/6 xl:mx-auto">
+		<div class="box_faq_question mb-4 pb-4 md:mb-5 md:pb-5 lg:mb-6 lg:pb-6">
+			<h3>すぐに介護サービスを利用したいのですが可能でしょうか？</h3>
+		</div>
+		<div class="box_faq_answer lg:pl-10">
+			<div class="inner">
+				<p class="mb-4 lg:mb-5">要介護認定（要支援1～2・要介護1～5）を受けている方はすぐに介護サービスをご利用いただけます。</p>
+				<p class="mb-4 lg:mb-5"><em class="block not-italic font-medium">要介護認定を受けていない場合</em>要介護認定申請書に記入のうえ、市区町村の担当窓口に申請します。</p>
+				<p class="mb-4 lg:mb-5"><em class="block not-italic font-medium">要支援1・要支援2の場合</em>市区町村に在籍する地域包括支援センターの職員と介護予防のケアプランを作成します。ケアプランに基づき介護サービスの利用契約を結びサービスを利用します。</p>
+				<p class="mb-4 lg:mb-5"><em class="block not-italic font-medium">要介護1以上の場合</em>まずは居宅介護支援事業所専属のケアマネージャーにご相談ください。<br>ケアマネージャーが面談を通してケアプラン（介護サービス計画書）を作成します。ケアプランに基づき介護サービスの利用契約を結びサービスを利用します。</p>
+			</div>
+		</div>
+		<div class="btn_priority flex justify-center"><a href="/contact/">お問い合わせへ</a></div>
+	</div>
+	<div class="box_faq mb-5 p-4 rounded-2xl md:p-6 md:mb-6 lg:p-8 lg:mb-8 xl:w-5/6 xl:mx-auto">
+		<div class="box_faq_question mb-4 pb-4 md:mb-5 md:pb-5 lg:mb-6 lg:pb-6">
+			<h3>要介護認定の結果に納得できない場合は、どうしたらいいですか？</h3>
+		</div>
+		<div class="box_faq_answer lg:pl-10">
+			<div class="inner">
+				<p>市町村の介護保険認定窓口か地域包括支援センター、または担当のケアマネージャーのいずれかにご相談ください。<br>認定結果について区分変更申請をするか、不服の申し立てが可能です。</p>
+			</div>
+		</div>
+	</div>
+	<div class="btn_priority flex justify-center"><a href="/faq/">よくある質問へ</a></div>
+</section>
+
+<section class="sect_instagram color01 container mb-20 mx-auto px-6 md:px-4 lg:mb-[6.25rem] lg:px-5 xl:mb-[7.5rem]">
+	<hgroup class="mb-8 text-center lg:mb-14">
+		<h1 class="inline-block">インスタグラム<small class="block">instagram</small></h1>
+	</hgroup>
+	<p class="mb-5 md:mb-6 md:text-center lg:mb-8">こばやしでは、各施設のようすをインスタグラムで発信しています。</p>
+	<div class="btn_priority flex justify-center"><a href="#" target="_blank" rel="noopener noreferrer">Instagramを見る</a></div>
+</section>
+
+<section class="sect_recruit color02 mb-20 lg:mb-[6.25rem] xl:mb-[7.5rem]">
+<div class="container mb-8 mx-auto px-6 md:px-4 md:grid md:grid-cols-2 md:gap-8 lg:items-center lg:px-5 lg:gap-10">
+	<div class="box_content md:order-2 xl:w-5/6">
+		<hgroup class="mb-8 text-center lg:mb-14">
+			<h1 class="inline-block">採用について<small class="block">recruit</small></h1>
+		</hgroup>
+		<div class="mb-5 relative z-10 md:hidden"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/common/no_image_l.png" alt="画像が見つかりません" class="rounded-2xl"></div>
+		<p class="mb-8 lg:mb-14">株式会社こばやしでは、地域や利用者さまに喜んでもらえるサービスを提供しています。<br>「こばやし」で私たちと一緒に働きませんか？</p>
+		<div class="btn_priority flex justify-center flex-wrap gap-5">
+			<a href="#">採用情報へ</a>
+			<a href="#">募集要項へ</a>
+		</div>
+		<div class="btn_secondary flex justify-center mt-5"><a href="#">エントリーフォームへ</a></div>
+	</div>
+	<div class="image_content hidden md:block md:order-1">
+		<div class=""><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/common/no_image_l.png" alt="画像が見つかりません"></div>
+	</div>
+</div>
+</section>
+
+<section class="sect_contact color03 container mb-20 mx-auto px-6 md:px-4 lg:mb-[6.25rem] lg:px-5 xl:mb-[7.5rem]">
+	<hgroup class="mb-8 text-center lg:mb-14">
+		<h1 class="inline-block">お問い合わせ<small class="block">contact</small></h1>
+	</hgroup>
+	<p class="mb-5 md:mb-6 lg:w-5/6 lg:mx-auto lg:mb-8">お電話・FAXまたはお問い合わせフォームから、お気軽にお問い合わせください。</p>
+	<div class="box_contents mb-8 md:flex md:gap-6 lg:w-5/6 lg:mx-auto lg:mb-[3.75rem] lg:gap-8">
+		<div class="box mb-6 md:mb-0 md:w-1/2">
+			<h3 class="heading_mark">株式会社こばやし</h3>
+			<ul class="mb-2 lg:mb-5 lg:flex lg:flex-wrap">
+				<li class="lg:w-1/2">居宅介護支援事業所</li>
+				<li class="lg:w-1/2">ヘルパーステーション</li>
+				<li class="lg:w-1/2">訪問看護ステーション</li>
+				<li class="lg:w-1/2">小規模多機能ホーム</li>
+			</ul>
+			<div class="txt_tel flex items-center gap-2 mb-2 lg:mb-3"><span>TEL</span><a href="tel:0770231605">0770-23-1605</a></div>
+			<div class="txt_fax flex items-center gap-2"><span>FAX</span>0770-23-1607</div>
+		</div>
+		<div class="box md:w-1/2">
+			<h3 class="heading_mark">サービス付き高齢者住宅「悠優」</h3>
+			<ul class="mb-2 lg:mb-5 lg:flex lg:flex-wrap">
+				<li class="lg:w-1/2">サービス付き高齢者住宅</li>
+				<li class="lg:w-1/2">デイサービス</li>
+				<li class="lg:w-1/2">介護タクシー</li>
+			</ul>
+			<div class="txt_tel flex items-center gap-2 mb-2 lg:mb-3"><span>TEL</span><a href="tel:0770258008">0770-25-8008</a></div>
+			<div class="txt_fax flex items-center gap-2"><span>FAX</span>0770-25-8008</div>
+		</div>
+	</div>
+	<div class="btn_priority flex justify-center"><a href="/contact/">お問い合わせフォームへ</a></div>
+	<div class="box_image mt-8 lg:mt-[3.75rem]"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/contact/img_people.png" alt=""></div>
 </section>
 
 </main><!-- #main -->

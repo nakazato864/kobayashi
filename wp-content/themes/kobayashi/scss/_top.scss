@@ -133,6 +133,10 @@
 				background-color: $White;
 				border-radius: rem(8);
 				box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.05);
+				transition: all 0.3s;
+				&:hover{
+					opacity: 0.8;
+				}
 				p{
 					padding-right: 1rem;
 					font-weight: 600;
@@ -154,6 +158,171 @@
 				background-size: 18.6667px, 28px;
 			}
 		}
+	}
+}
+}
+
+.sect_faq{
+	hgroup h1{
+		&::before{
+			top: 70%;
+			left: -75%;
+		}
+	}
+
+	.box_faq{
+		background-color: $White;
+		box-shadow: 0 4px 6px 3px rgba($Black, 0.05);
+		position: relative;
+		z-index: 10;
+
+		h3{
+			letter-spacing: 0.05em;
+		}
+
+		&_question,
+		&_answer{
+			display: flex;
+			align-items: baseline;
+			gap: 12px;
+			&::before{
+				font-family: $fn-Fredoka;
+				font-weight: 600;
+				font-size: 2rem;
+				line-height: 100%;
+			}
+		}
+		&_question{
+			border-bottom: 1px dotted rgba($Brown-400, .15);
+			&::before{
+				content: 'Q.';
+				color: $Orange;
+			}
+		}
+		&_answer{
+			&::before{
+				content: 'A.';
+				color: $Pink;
+			}
+			p{
+				font-size: 15px;
+			}
+		}
+
+	@include media(lg){
+		box-shadow: 0 8px 12px 6px rgba($Black, 0.05);
+		&_question,
+		&_answer{
+			gap: 16px;
+			&::before{
+				font-size: rem(40);
+			}
+		}
+		&_answer p{
+			font-size: 18px;
+		}
+	}
+	}
+}
+
+.sect_instagram{
+	hgroup h1{
+		&::before{
+			top: 50%;
+			left: 70%;
+		}
+	}
+}
+
+.sect_recruit{
+	hgroup h1{
+		&::before{
+			top: 60%;
+			left: -80%;
+		}
+	}
+@include media(md){
+	hgroup h1{
+		&::before{
+			top: 0;
+			left: 90%;
+		}
+	}
+	.image_content img{
+		border-radius: rem(20);
+	}
+}
+}
+
+
+.sect_contact{
+	hgroup h1{
+		&::before{
+			top: 45%;
+			left: 90%;
+		}
+	}
+
+	.box_contents{
+		ul{
+			padding-left: 1.333em;
+			li{
+				color: $Text-400;
+				font-size: rem(15);
+				line-height: 1.5em;
+				list-style-type: disc;
+			}
+		}
+		.txt_tel, .txt_fax{
+			color: $Orange;
+			font-family: $fn-Manrope;
+			line-height: 1.0em;
+			letter-spacing: -.02em;
+			>span{
+				display: inline-block;
+				padding: 0 0.5rem;
+				color: $White;
+				letter-spacing: normal;
+				line-height: 1.5em;
+				background-color: $Orange;
+				border-radius: 100px;
+			}
+		}
+		.txt_tel{
+			font-size: 2rem;
+			font-weight: 800;
+			a:hover{
+				color: $Orange;
+				opacity: 0.8;
+			}
+			>span{
+				font-size: 1rem;
+			}
+		}
+		.txt_fax{
+			font-size: rem(24);
+			font-weight: 700;
+			>span{
+				font-size: rem(14);
+			}
+		}
+	}
+	.box_image{
+		>img{
+			margin: 0 auto;
+			width: calc(160 / 375 * 100vw);
+			max-width: 384px;
+		}
+	}
+
+@include media(lg){
+	.box_contents{
+		ul{
+			li{
+				font-size: 1rem;
+			}
+		}
+		.txt_tel{ font-size: rem(36); }
 	}
 }
 }

@@ -93,6 +93,36 @@ hgroup{
 }
 }
 
+h3{
+	margin-bottom: 0.25rem;
+	color: $Text-400;
+	font-size: 1rem;
+	font-weight: 600;
+	line-height: 1.5em;
+	letter-spacing: 0.05em;
+
+	&.heading_mark{
+		display: flex;
+		align-items: center;
+		gap: rem(4);
+		&::before{
+			content: '';
+			display: block;
+			margin-top: -0.1em;
+			width: 1rem;
+			height: 1rem;
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			background-size: contain;
+		}
+	}
+
+@include media(lg){
+	margin-bottom: rem(12);
+	font-size: rem(18);
+}
+}
+
 }
 
 //==================================================
@@ -506,15 +536,16 @@ footer.site_footer{
 //==================================================
 //	button
 //==================================================
-.btn_priority{
+.btn_priority, .btn_secondary{
 	>a{
 		display: block;
-		padding: rem(20) rem(60) rem(20) rem(40);
+		padding: rem(16) rem(60) rem(16) rem(40);
 		color: $White;
 		font-size: rem(18);
 		font-weight: 700;
 		text-align: center;
 		border-radius: 100px;
+		box-shadow: 0 1px 4px rgba($Black, 0.2);
 		position: relative;
 		transition: all 0.2s;
 		&::after{
@@ -539,7 +570,11 @@ footer.site_footer{
 	}
 
 @include media(lg){
-	>a{ min-width: rem(240);}
+	>a{
+		min-width: rem(240);
+		padding-top: rem(20);
+		padding-bottom: rem(20);
+	}
 }
 }
 
@@ -555,10 +590,24 @@ footer.site_footer{
 			>small{ color: $Pink; }
 		}
 	}
+	h3.heading_mark{
+		&::before{
+			background-image: url(../images/common/circle01.svg);
+		}
+	}
 	.btn_priority >a{
 		background-color: $Pink;
 		&:hover{
 			background-color: rgba($Pink, 0.9);
+		}
+	}
+	.btn_secondary >a{
+		color: $Pink;
+		background-color: $White;
+		border: 2px solid $Pink;
+		&:visited{ color: $Pink; }
+		&::after{
+			background-image: url(../images/icon/arrow_right_01.svg);
 		}
 	}
 }
@@ -571,10 +620,24 @@ footer.site_footer{
 			>small{ color: $Scooter; }
 		}
 	}
+	h3.heading_mark{
+		&::before{
+			background-image: url(../images/common/circle02.svg);
+		}
+	}
 	.btn_priority >a{
 		background-color: $Scooter;
 		&:hover{
 			background-color: rgba($Scooter, 0.9);
+		}
+	}
+	.btn_secondary >a{
+		color: $Scooter;
+		background-color: $White;
+		border: 2px solid $Scooter;
+		&:visited{ color: $Scooter; }
+		&::after{
+			background-image: url(../images/icon/arrow_right_02.svg);
 		}
 	}
 }
@@ -587,10 +650,24 @@ footer.site_footer{
 			>small{ color: $Orange; }
 		}
 	}
+	h3.heading_mark{
+		&::before{
+			background-image: url(../images/common/circle03.svg);
+		}
+	}
 	.btn_priority >a{
 		background-color: $Orange;
 		&:hover{
 			background-color: rgba($Orange, 0.9);
+		}
+	}
+	.btn_secondary >a{
+		color: $Orange;
+		background-color: $White;
+		border: 2px solid $Orange;
+		&:visited{ color: $Orange; }
+		&::after{
+			background-image: url(../images/icon/arrow_right_03.svg);
 		}
 	}
 }
@@ -603,10 +680,24 @@ footer.site_footer{
 			>small{ color: $Picton-Blue; }
 		}
 	}
+	h3.heading_mark{
+		&::before{
+			background-image: url(../images/common/circle04.svg);
+		}
+	}
 	.btn_priority >a{
 		background-color: $Picton-Blue;
 		&:hover{
 			background-color: rgba($Picton-Blue, 0.9);
+		}
+	}
+	.btn_secondary >a{
+		color: $Picton-Blue;
+		background-color: $White;
+		border: 2px solid $Picton-Blue;
+		&:visited{ color: $Picton-Blue; }
+		&::after{
+			background-image: url(../images/icon/arrow_right_04.svg);
 		}
 	}
 }
