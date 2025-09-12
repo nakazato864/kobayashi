@@ -11,26 +11,12 @@ get_header();
 <main id="primary" class="site_main">
 <section class="site_main_heading container overflow-x-hidden mx-auto mt-12 mb-20 px-6 md:px-4 md:flex md:items-end md:justify-between lg:px-5 lg:mb-[100px]">
 	<div class="swiper01 hidden md:block">
-		<div class="swiper-wrapper">
-			<div class="swiper-slide"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/main_01.jpg" alt="イメージ写真"></div>
-			<div class="swiper-slide"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/main_02.jpg" alt="イメージ写真"></div>
-			<div class="swiper-slide"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/main_03.jpg" alt="イメージ写真"></div>
-			<div class="swiper-slide"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/main_04.jpg" alt="イメージ写真"></div>
-			<div class="swiper-slide"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/main_05.jpg" alt="イメージ写真"></div>
-			<div class="swiper-slide"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/main_06.jpg" alt="イメージ写真"></div>
-		</div>
+		<?php get_template_part( 'template-parts/content-slide', 'page' ); ?>
 	</div>
 	<div class="inner">
 		<h1 class="mx-auto z-10 relative"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/catchcopy.svg" alt="住み慣れた町で、ずっと元気に"></h1>
 		<div class="swiper02 z-0 aspect-square md:aspect-[1.414/1]">
-			<div class="swiper-wrapper">
-				<div class="swiper-slide"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/main_01.jpg" alt="イメージ写真"></div>
-				<div class="swiper-slide"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/main_02.jpg" alt="イメージ写真"></div>
-				<div class="swiper-slide"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/main_03.jpg" alt="イメージ写真"></div>
-				<div class="swiper-slide"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/main_04.jpg" alt="イメージ写真"></div>
-				<div class="swiper-slide"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/main_05.jpg" alt="イメージ写真"></div>
-				<div class="swiper-slide"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/main_06.jpg" alt="イメージ写真"></div>
-			</div>
+			<?php get_template_part( 'template-parts/content-slide', 'page' ); ?>
 		</div>
 		<div class="box_image mx-auto z-10 relative"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/illust_people.png" alt="イラストイメージ"></div>
 	</div>
@@ -52,10 +38,10 @@ get_header();
 		get_template_part( 'template-parts/post', 'page' );
 	endwhile; ?>
 	</ul>
-	<div class="btn_priority flex justify-center"><a href="#">トピックス一覧へ</a></div>
+	<div class="btn_priority flex justify-center"><a href="/category/topics/">トピックス一覧へ</a></div>
 	<?php else : ?>
 	<p class="text-center">現在、トピックスはありません</p>
-	<?php endif; ?>
+	<?php endif; ?><?php wp_reset_postdata(); ?>
 </section>
 
 <section class="sect_about color01 mb-20 lg:mb-[100px]">
@@ -83,31 +69,31 @@ get_header();
 		<h1 class="inline-block">事業サービス<small class="block">service</small></h1>
 	</hgroup>
 	<ul class="grid grid-cols-2 gap-4 mb-8 md:grid-cols-4 md:gap-5 lg:gap-8 lg:mb-14">
-		<li class=""><a href="#">
+		<li><a href="#">
 			<img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/img_service01.png" alt="居宅介護支援">
 			<p class="mt-3 text-left lg:mt-4 lg:text-center">居宅介護支援</p>
 		</a></li>
-		<li class=""><a href="#">
+		<li><a href="#">
 			<img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/img_service02.png" alt="訪問介護（ヘルパーステーション）">
 			<p class="mt-3 text-left lg:mt-4 lg:text-center">訪問介護<br><small class="text-sm">（ヘルパーステーション）</small></p>
 		</a></li>
-		<li class=""><a href="#">
+		<li><a href="#">
 			<img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/img_service03.png" alt="訪問看護">
 			<p class="mt-3 text-left lg:mt-4 lg:text-center">訪問看護</p>
 		</a></li>
-		<li class=""><a href="#">
+		<li><a href="#">
 			<img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/img_service04.png" alt="デイサービス">
 			<p class="mt-3 text-left lg:mt-4 lg:text-center">デイサービス</p>
 		</a></li>
-		<li class=""><a href="#">
+		<li><a href="#">
 			<img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/img_service05.png" alt="小規模多機能ホーム">
 			<p class="mt-3 text-left lg:mt-4 lg:text-center">小規模<span class="inline-block">多機能ホーム</span></p>
 		</a></li>
-		<li class=""><a href="#">
+		<li><a href="#">
 			<img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/img_service06.png" alt="サービス付高齢者住宅">
 			<p class="mt-3 text-left lg:mt-4 lg:text-center">サービス付<span class="lg:inline-block">高齢者住宅</span></p>
 		</a></li>
-		<li class=""><a href="#">
+		<li><a href="#">
 			<img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/img_service07.png" alt="介護タクシー">
 			<p class="mt-3 text-left lg:mt-4 lg:text-center">介護タクシー</p>
 		</a></li>
@@ -119,30 +105,19 @@ get_header();
 	<hgroup class="mb-8 text-center lg:mb-14">
 		<h1 class="inline-block">よくある質問<small class="block">faq</small></h1>
 	</hgroup>
-	<div class="box_faq mb-5 p-4 rounded-2xl md:p-6 md:mb-6 lg:p-8 lg:mb-8 xl:w-5/6 xl:mx-auto">
-		<div class="box_faq_question mb-4 pb-4 md:mb-5 md:pb-5 lg:mb-6 lg:pb-6">
-			<h3>すぐに介護サービスを利用したいのですが可能でしょうか？</h3>
-		</div>
-		<div class="box_faq_answer lg:pl-10">
-			<div class="inner">
-				<p class="mb-4 lg:mb-5">要介護認定（要支援1～2・要介護1～5）を受けている方はすぐに介護サービスをご利用いただけます。</p>
-				<p class="mb-4 lg:mb-5"><em class="block not-italic font-medium">要介護認定を受けていない場合</em>要介護認定申請書に記入のうえ、市区町村の担当窓口に申請します。</p>
-				<p class="mb-4 lg:mb-5"><em class="block not-italic font-medium">要支援1・要支援2の場合</em>市区町村に在籍する地域包括支援センターの職員と介護予防のケアプランを作成します。ケアプランに基づき介護サービスの利用契約を結びサービスを利用します。</p>
-				<p class="mb-4 lg:mb-5"><em class="block not-italic font-medium">要介護1以上の場合</em>まずは居宅介護支援事業所専属のケアマネージャーにご相談ください。<br>ケアマネージャーが面談を通してケアプラン（介護サービス計画書）を作成します。ケアプランに基づき介護サービスの利用契約を結びサービスを利用します。</p>
-			</div>
-		</div>
-		<div class="btn_priority flex justify-center"><a href="/contact/">お問い合わせへ</a></div>
-	</div>
-	<div class="box_faq mb-5 p-4 rounded-2xl md:p-6 md:mb-6 lg:p-8 lg:mb-8 xl:w-5/6 xl:mx-auto">
-		<div class="box_faq_question mb-4 pb-4 md:mb-5 md:pb-5 lg:mb-6 lg:pb-6">
-			<h3>要介護認定の結果に納得できない場合は、どうしたらいいですか？</h3>
-		</div>
-		<div class="box_faq_answer lg:pl-10">
-			<div class="inner">
-				<p>市町村の介護保険認定窓口か地域包括支援センター、または担当のケアマネージャーのいずれかにご相談ください。<br>認定結果について区分変更申請をするか、不服の申し立てが可能です。</p>
-			</div>
-		</div>
-	</div>
+<?php
+$faqArgs = [
+	'post_type' => 'question_and_answer',
+	'post_status' => 'publish',
+	//'order' => 'ASC',
+	'posts_per_page' => 2,
+];
+$faqQuery = new WP_Query($faqArgs);
+if ($faqQuery->have_posts()) :
+	while ($faqQuery->have_posts()) : $faqQuery->the_post();
+		get_template_part( 'template-parts/post-faq', 'page' );
+	endwhile; ?>
+<?php endif; ?>
 	<div class="btn_priority flex justify-center"><a href="/faq/">よくある質問へ</a></div>
 </section>
 

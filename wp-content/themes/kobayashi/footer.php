@@ -13,12 +13,12 @@
 
 <footer id="colophon" class="site_footer py-14">
 	<div class="container mx-auto px-6 md:px-4 lg:px-5">
-		<div class="mb-10"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/logo_Kobayashi_wh.svg" alt="株式会社こばやし"></div>
+		<div class="site_footer_logo mb-10"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/logo_Kobayashi_wh.svg" alt="株式会社こばやし"></div>
 		<div class="inner_footer_nav lg:flex lg:gap-8 lg:py-10">
 			<nav class="footer_navgation py-10 lg:w-1/3 lg:py-0 xl:w-5/12">
 				<ul class="footer_navgation_list mb-5 flex flex-wrap justify-between md:w-1/2 lg:w-full xl:justify-start xl:gap-x-8">
 					<li><a href="/">トップページ</a></li>
-					<li><a href="#">トピックス</a></li>
+					<li><a href="/category/topics/">トピックス</a></li>
 					<li><a href="/about/">私たちについて</a></li>
 					<li><a href="/service/">事業サービス</a></li>
 					<li><a href="/faq/">よくある質問</a></li>

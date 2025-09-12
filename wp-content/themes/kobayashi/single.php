@@ -10,31 +10,17 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
-
-		<?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content', get_post_type() );
-
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'kobayashi' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'kobayashi' ) . '</span> <span class="nav-title">%title</span>',
-				)
-			);
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
-	</main><!-- #main -->
+<main id="primary" class="site_main category">
+<section class="sect_post color04 container mx-auto mb-20 px-6 md:px-4 lg:px-5 lg:mb-[100px]">
+	<hgroup class="mt-10 mb-20 text-center md:mt-16 lg:mt-20 lg:mb-[7.5rem]">
+		<h1 class="inline-block">トピックス<small class="block">topics</small></h1>
+	</hgroup>
+	<?php while ( have_posts() ) :
+		the_post();
+		get_template_part( 'template-parts/content', get_post_type() );
+	endwhile; ?>
+</section>
+</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();

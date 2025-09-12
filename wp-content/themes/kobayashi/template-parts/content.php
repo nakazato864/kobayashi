@@ -9,55 +9,25 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+<article id="post-<?php the_ID(); ?>" class="post lg:w-2/3 lg:mx-auto">
+	<header class="hd_post mb-8 lg:mb-10">
 		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php
-				kobayashi_posted_on();
-				kobayashi_posted_by();
-				?>
-			</div><!-- .entry-meta -->
+		the_title( '<h1 class="hd_post_ttl">', '</h1>' );
+		if ( 'post' === get_post_type() ) : ?>
+			<p class="mt-1 text-sm lg:text-[15px]"><time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y/m/d'); ?></time></p>
 		<?php endif; ?>
-	</header><!-- .entry-header -->
+	</header>
 
 	<?php kobayashi_post_thumbnail(); ?>
 
-	<div class="entry-content">
+	<div class="post_content">
 		<?php
-		the_content(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'kobayashi' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				wp_kses_post( get_the_title() )
-			)
-		);
-
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'kobayashi' ),
-				'after'  => '</div>',
-			)
-		);
+		the_content();
 		?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php kobayashi_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	</div>
+	<div class="post_link flex justify-between mt-12 md:mt-14 lg:mt-16">
+		<div class="next"><?php next_post_link('%link','次へ'); ?></div>
+		<div><a href="/category/topics/">トピックス一覧へ</a></div>
+		<div class="previous"><?php previous_post_link('%link','前へ'); ?></div>
+	</div>
 </article><!-- #post-<?php the_ID(); ?> -->

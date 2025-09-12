@@ -11,19 +11,6 @@ body{
 	font-weight: 400;
 	line-height: 1.75em;
 	background-color: $BG-color;
-
-	a:visited{
-		color: inherit;
-	}
-	p{
-		color: $Text-400;
-		font-size: rem(16);
-		line-height: 1.75em;
-		text-align: justify;
-		@include media(lg){
-			font-size: rem(18);
-		}
-	}
 }
 
 main{
@@ -43,6 +30,28 @@ main{
 		max-width: 1280px;
 	}
 }
+
+p{
+	color: $Text-400;
+	font-size: rem(16);
+	line-height: 1.75em;
+	text-align: justify;
+
+	@include media(lg){
+		font-size: rem(18);
+	}
+
+	em{
+		font-style: normal;
+		font-weight: 500;
+	}
+}
+ul, ol{
+	margin: 1rem 0;
+	list-style-type: disc;
+	padding-left: 1.333em;
+}
+
 
 hgroup{
 	margin-bottom: 2rem;
@@ -121,6 +130,16 @@ h3{
 	margin-bottom: rem(12);
 	font-size: rem(18);
 }
+}
+
+a{
+	color: $Blue;
+	text-decoration: underline;
+	transition: all 0.2s;
+	&:hover{
+		color: $Blue-on;
+		text-decoration: none;
+	}
 }
 
 }
@@ -358,7 +377,6 @@ header.site_header{
 				&::after{ display: none; }
 				&:hover{
 					color: $Pink;
-					text-decoration: underline;
 				}
 			}
 		}
@@ -461,6 +479,12 @@ footer.site_footer{
 	.office{
 		.txt_tel, .txt_fax{
 			font-family: $fn-Manrope;
+			a{
+				&:hover{
+					color: $White;
+					opacity: 0.8;
+				}
+			}
 		}
 	}
 
@@ -544,6 +568,7 @@ footer.site_footer{
 		font-size: rem(18);
 		font-weight: 700;
 		text-align: center;
+		text-decoration: none;
 		border-radius: 100px;
 		box-shadow: 0 1px 4px rgba($Black, 0.2);
 		position: relative;
@@ -598,6 +623,7 @@ footer.site_footer{
 	.btn_priority >a{
 		background-color: $Pink;
 		&:hover{
+			color: $White;
 			background-color: rgba($Pink, 0.9);
 		}
 	}
@@ -628,6 +654,7 @@ footer.site_footer{
 	.btn_priority >a{
 		background-color: $Scooter;
 		&:hover{
+			color: $White;
 			background-color: rgba($Scooter, 0.9);
 		}
 	}
@@ -658,6 +685,7 @@ footer.site_footer{
 	.btn_priority >a{
 		background-color: $Orange;
 		&:hover{
+			color: $White;
 			background-color: rgba($Orange, 0.9);
 		}
 	}
@@ -688,6 +716,7 @@ footer.site_footer{
 	.btn_priority >a{
 		background-color: $Picton-Blue;
 		&:hover{
+			color: $White;
 			background-color: rgba($Picton-Blue, 0.9);
 		}
 	}

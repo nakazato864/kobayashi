@@ -1,0 +1,85 @@
+@use "sass:math";
+@use "variables" as *;
+
+//==================================================
+//	FAQ
+//==================================================
+.sect_faq{
+	hgroup h1{
+		&::before{
+			top: 70%;
+			left: -75%;
+		}
+	}
+
+	.box_faq{
+		background-color: $White;
+		box-shadow: 0 4px 6px 3px rgba($Black, 0.05);
+		position: relative;
+		z-index: 10;
+
+		h3{
+			letter-spacing: 0.05em;
+		}
+
+		&_question,
+		&_answer{
+			display: flex;
+			align-items: baseline;
+			gap: 12px;
+			&::before{
+				font-family: $fn-Fredoka;
+				font-weight: 600;
+				font-size: 2rem;
+				line-height: 100%;
+			}
+		}
+		&_question{
+			border-bottom: 1px dotted rgba($Brown-400, .15);
+			&::before{
+				content: 'Q.';
+				color: $Orange;
+			}
+		}
+		&_answer{
+			&::before{
+				content: 'A.';
+				color: $Pink;
+			}
+			p{
+				font-size: rem(15);
+				& + p{
+					margin-top: 1rem;
+				}
+			}
+			ul{
+				color: $Text-400;
+				font-size: rem(15);
+			}
+			.btn_priority{
+				margin-top: rem(20);
+			}
+		}
+
+	@include media(lg){
+		box-shadow: 0 8px 12px 6px rgba($Black, 0.05);
+		&_question,
+		&_answer{
+			gap: 16px;
+			&::before{
+				font-size: rem(40);
+			}
+		}
+		&_question h3{ font-size: rem(20); }
+		&_answer{
+			p{
+				font-size: 18px;
+			}
+			ul{
+				font-size: rem(18);
+				line-height: 1.75em;
+			}
+		}
+	}
+	}
+}

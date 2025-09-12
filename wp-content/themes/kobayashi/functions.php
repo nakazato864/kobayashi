@@ -12,6 +12,58 @@ if ( ! defined( '_S_VERSION' ) ) {
 	define( '_S_VERSION', '1.0.0' );
 }
 
+/*
+ * wpの不要コード削除
+ */
+// フィードリンク削除
+remove_action('wp_head', 'feed_links', 2);
+remove_action('wp_head', 'feed_links_extra', 3);
+
+// 絵文字削除
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('admin_print_scripts', 'print_emoji_detection_script');
+remove_action('wp_print_styles', 'print_emoji_styles');
+remove_action('admin_print_styles', 'print_emoji_styles');
+
+// DNS Prefetch削除
+remove_action('wp_head', 'wp_resource_hints', 2);
+
+// Embed削除
+remove_action('wp_head', 'rest_output_link_wp_head');
+remove_action('wp_head', 'wp_oembed_add_discovery_links');
+remove_action('wp_head', 'wp_oembed_add_host_js');
+
+// EditURI
+remove_action('wp_head', 'rsd_link');
+
+// wlwmanifest削除
+remove_action('wp_head', 'wlwmanifest_link');
+
+// 前の記事､次の記事のリンク削除
+remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
+
+// ショートリンクURLの削除
+remove_action('wp_head', 'wp_shortlink_wp_head');
+
+// robotsメタタグのmax-image-preview:largeの削除
+remove_filter('wp_robots', 'wp_robots_max_image_preview_large');
+
+// wpが挿入するjQueryの削除
+add_filter('wp_default_scripts', 'dequeue_jquery_migrate');
+function dequeue_jquery_migrate($scripts)
+{
+  if (!is_admin()) {
+    $scripts->remove('jquery');
+  }
+}
+
+/* 管理画面メニューから「コメント」を非表示 */
+function remove_menus()
+{
+  remove_menu_page('edit-comments.php'); // コメント
+}
+add_action('admin_menu', 'remove_menus');
+
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -175,4 +227,3 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-

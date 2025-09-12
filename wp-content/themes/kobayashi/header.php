@@ -43,7 +43,7 @@
 	<nav id="site-navigation" class="main_navigation lg:w-full">
 		<ul class="main_navigation_list lg:flex lg:justify-between lg:items-center xl:justify-end">
 			<li><a href="/">トップページ</a></li>
-			<li><a href="#">トピックス</a></li>
+			<li><a href="/category/topics/">トピックス</a></li>
 			<li><a href="/about/">私たちについて</a></li>
 			<li><a href="/service/">事業サービス</a></li>
 			<li><a href="/faq/">よくある質問</a></li>
