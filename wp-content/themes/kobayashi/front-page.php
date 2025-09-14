@@ -8,15 +8,15 @@
 get_header();
 ?>
 
-<main id="primary" class="site_main">
+<main id="primary" class="site_main index">
 <section class="site_main_heading container overflow-x-hidden mx-auto mt-12 mb-20 px-6 md:px-4 md:flex md:items-end md:justify-between lg:px-5 lg:mb-[100px]">
 	<div class="swiper01 hidden md:block">
-		<?php get_template_part( 'template-parts/content-slide', 'page' ); ?>
+		<?php get_template_part( 'template-parts/content-slide' ); ?>
 	</div>
 	<div class="inner">
 		<h1 class="mx-auto z-10 relative"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/catchcopy.svg" alt="住み慣れた町で、ずっと元気に"></h1>
 		<div class="swiper02 z-0 aspect-square md:aspect-[1.414/1]">
-			<?php get_template_part( 'template-parts/content-slide', 'page' ); ?>
+			<?php get_template_part( 'template-parts/content-slide' ); ?>
 		</div>
 		<div class="box_image mx-auto z-10 relative"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/illust_people.png" alt="イラストイメージ"></div>
 	</div>

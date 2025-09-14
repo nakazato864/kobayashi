@@ -13,7 +13,7 @@ $cat = get_the_category();
 $cat = $cat[0];
 ?>
 
-<main id="primary" class="site_main category">
+<main id="primary" class="site_main category <?php echo get_post_type(); ?>">
 <section class="sect_topics color04 container mx-auto mb-20 px-6 md:px-4 lg:px-5 lg:mb-[100px]">
 	<hgroup class="mt-10 mb-20 text-center md:mt-16 lg:mt-20 lg:mb-[7.5rem]">
 		<h1 class="inline-block"><?php echo $cat->cat_name; ?><small class="block"><?php echo $cat->slug; ?></small></h1>
