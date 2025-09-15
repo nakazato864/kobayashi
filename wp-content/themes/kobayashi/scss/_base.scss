@@ -127,6 +127,28 @@ hgroup{
 	}
 }
 
+h2.hd_decorated{
+	margin-bottom: rem(24);
+	color: $Text-500;
+	font-size: rem(24);
+	font-weight: 600;
+	line-height: 1.333em;
+	letter-spacing: 0.1em;
+	>span::after{
+		content: '';
+		display: block;
+		width: 100%;
+		height: 6px;
+		background-repeat: repeat-x;
+		background-size: contain;
+	}
+@include media(lg){
+	font-size: rem(28);
+	>span::after{
+		height: 8px;
+	}
+}
+}
 
 h3{
 	margin-bottom: 0.25rem;
@@ -136,9 +158,9 @@ h3{
 	line-height: 1.5em;
 	letter-spacing: 0.05em;
 
-	&.heading_mark{
+	&.hd_mark{
 		display: flex;
-		align-items: center;
+		align-items: baseline;
 		gap: rem(4);
 		&::before{
 			content: '';
@@ -642,7 +664,12 @@ footer.site_footer{
 			>small{ color: $Pink; }
 		}
 	}
-	h3.heading_mark{
+	h2.hd_decorated{
+		>span::after{
+			background-image: url(../images/common/border01.svg);
+		}
+	}
+	h3.hd_mark{
 		&::before{
 			background-image: url(../images/common/circle01.svg);
 		}
@@ -673,7 +700,12 @@ footer.site_footer{
 			>small{ color: $Scooter; }
 		}
 	}
-	h3.heading_mark{
+	h2.hd_decorated{
+		>span::after{
+			background-image: url(../images/common/border02.svg);
+		}
+	}
+	h3.hd_mark{
 		&::before{
 			background-image: url(../images/common/circle02.svg);
 		}
@@ -704,7 +736,12 @@ footer.site_footer{
 			>small{ color: $Orange; }
 		}
 	}
-	h3.heading_mark{
+	h2.hd_decorated{
+		>span::after{
+			background-image: url(../images/common/border03.svg);
+		}
+	}
+	h3.hd_mark{
 		&::before{
 			background-image: url(../images/common/circle03.svg);
 		}
@@ -735,7 +772,12 @@ footer.site_footer{
 			>small{ color: $Picton-Blue; }
 		}
 	}
-	h3.heading_mark{
+	h2.hd_decorated{
+		>span::after{
+			background-image: url(../images/common/border04.svg);
+		}
+	}
+	h3.hd_mark{
 		&::before{
 			background-image: url(../images/common/circle04.svg);
 		}

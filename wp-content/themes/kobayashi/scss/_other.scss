@@ -50,3 +50,55 @@
 	}
 	}
 }
+
+//==================================================
+//	Document
+//==================================================
+.sect_document{
+	hgroup h1{
+		&::before{
+			top: 0;
+			left: -40%;
+			@include media(sm){
+				left: -25%;
+			}
+		}
+	}
+
+	.box_contents{
+		padding-left: 0;
+		list-style: none;
+		li{
+			border-bottom: 1px dashed $Text-100;
+			p{
+				line-height: 1.5em;
+				>small{
+					color: $Text-400;
+					&::before{
+						content: '-';
+						display: inline;
+						padding: 0 rem(4);
+					}
+				}
+			}
+			a{
+				display: flex;
+				align-items: center;
+				gap: 4px;
+				font-size: rem(14);
+				font-weight: 500;
+				&::before{
+					content: '';
+					display: block;
+					width: 20px;
+					height: 20px;
+					background: url(../images/icon/pdf_line.svg) 50% 50% no-repeat;
+					background-size: contain;
+				}
+			@include media(lg){
+				font-size: rem(15);
+			}
+			}
+		}
+	}
+}

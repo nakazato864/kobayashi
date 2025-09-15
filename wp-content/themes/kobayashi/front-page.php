@@ -115,9 +115,9 @@ $faqArgs = [
 $faqQuery = new WP_Query($faqArgs);
 if ($faqQuery->have_posts()) :
 	while ($faqQuery->have_posts()) : $faqQuery->the_post();
-		get_template_part( 'template-parts/post-faq', 'page' );
+		get_template_part( 'template-parts/post-faq' );
 	endwhile; ?>
-<?php endif; ?>
+<?php endif; ?><?php wp_reset_postdata(); ?>
 	<div class="btn_priority flex justify-center"><a href="/faq/">よくある質問へ</a></div>
 </section>
 
@@ -156,7 +156,7 @@ if ($faqQuery->have_posts()) :
 	<p class="mb-5 md:mb-6 lg:w-5/6 lg:mx-auto lg:mb-8">お電話・FAXまたはお問い合わせフォームから、お気軽にお問い合わせください。</p>
 	<div class="box_contents mb-8 md:flex md:gap-6 lg:w-5/6 lg:mx-auto lg:mb-[3.75rem] lg:gap-8">
 		<div class="box mb-6 md:mb-0 md:w-1/2">
-			<h3 class="heading_mark">株式会社こばやし</h3>
+			<h3 class="hd_mark">株式会社こばやし</h3>
 			<ul class="mb-2 lg:mb-5 lg:flex lg:flex-wrap">
 				<li class="lg:w-1/2">居宅介護支援事業所</li>
 				<li class="lg:w-1/2">ヘルパーステーション</li>
@@ -167,7 +167,7 @@ if ($faqQuery->have_posts()) :
 			<div class="txt_fax flex items-center gap-2"><span>FAX</span>0770-23-1607</div>
 		</div>
 		<div class="box md:w-1/2">
-			<h3 class="heading_mark">サービス付き高齢者住宅「悠優」</h3>
+			<h3 class="hd_mark">サービス付き高齢者住宅「悠優」</h3>
 			<ul class="mb-2 lg:mb-5 lg:flex lg:flex-wrap">
 				<li class="lg:w-1/2">サービス付き高齢者住宅</li>
 				<li class="lg:w-1/2">デイサービス</li>
