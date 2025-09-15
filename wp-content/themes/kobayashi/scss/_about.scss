@@ -1,0 +1,96 @@
+@use "sass:math";
+@use "variables" as *;
+
+//==================================================
+//	ABOUT
+//==================================================
+.sect_about{
+	hgroup h1{
+		&::before{
+			left: 0;
+			transform: translate(-80%, -40%);
+		}
+	}
+	img{ border-radius: rem(20);}
+@include media(md){
+	hgroup h1::before{
+		transform: translate(-80%, -60%);
+	}
+}
+
+.inner{
+	.txt_philosophy{
+		font-size: rem(18);
+	}
+	table{
+		color: $Text-400;
+		b{ font-weight: 500; }
+		th, td{
+			border-top: 1px dashed $Text-100;
+			border-bottom: 1px dashed $Text-100;
+		}
+		th{
+			width: calc(5em + 24px);
+			font-size: rem(15);
+			font-weight: 500;
+			text-align: left;
+			background-color: rgba($Pink, 0.1);
+		}
+		td{ background-color: $White; }
+		.box_activities{
+			font-size: rem(15);
+			ul{ margin: 0; }
+			li{ line-height: 1.75em; }
+		}
+
+	@include media(md){
+		th{
+			width: 20%;
+			font-size: 1rem;
+		}
+		.box_activities{
+			font-size: 1rem;
+			br{ display: none; }
+		}
+	}
+
+	@include media(lg){
+		th, .box_activities{ font-size: rem(17); }
+	}
+	}
+}
+
+.area_history{
+	table{
+		tr{
+			td{
+				padding: rem(12);
+				border-left: none;
+				border-right: none;
+			}
+			td:first-child{
+				width: calc(7em + 24px);
+				font-size: rem(15);
+				font-weight: 500;
+				text-align: left;
+				background-color: rgba($Pink, 0.1);
+			}
+		}
+
+	@include media(md){
+		tr{
+			td{ padding: rem(20); }
+			td:first-child{
+				width: 20%;
+				font-size: 1rem;
+			}
+		}
+	}
+	@include media(lg){
+		tr td:first-child{
+			font-size: rem(17);
+		}
+	}
+	}
+}
+}

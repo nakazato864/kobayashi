@@ -11,12 +11,12 @@ get_header();
 <main id="primary" class="site_main index">
 <section class="site_main_heading container overflow-x-hidden mx-auto mt-12 mb-20 px-6 md:px-4 md:flex md:items-end md:justify-between lg:px-5 lg:mb-[100px]">
 	<div class="swiper01 hidden md:block">
-		<?php get_template_part( 'template-parts/content-slide' ); ?>
+		<?php get_template_part( 'template-parts/content', 'slide'); ?>
 	</div>
 	<div class="inner">
 		<h1 class="mx-auto z-10 relative"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/catchcopy.svg" alt="住み慣れた町で、ずっと元気に"></h1>
 		<div class="swiper02 z-0 aspect-square md:aspect-[1.414/1]">
-			<?php get_template_part( 'template-parts/content-slide' ); ?>
+			<?php get_template_part( 'template-parts/content', 'slide'); ?>
 		</div>
 		<div class="box_image mx-auto z-10 relative"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/illust_people.png" alt="イラストイメージ"></div>
 	</div>
@@ -35,7 +35,7 @@ get_header();
 	if ($newsQuery->have_posts()) : ?>
 	<ul class="mb-8 lg:w-5/6 lg:mx-auto">
 	<?php while ($newsQuery->have_posts()) : $newsQuery->the_post();
-		get_template_part( 'template-parts/post', 'page' );
+		get_template_part( 'template-parts/post', 'topics' );
 	endwhile; ?>
 	</ul>
 	<div class="btn_priority flex justify-center"><a href="/category/topics/">トピックス一覧へ</a></div>
@@ -54,14 +54,14 @@ get_header();
 		<div class="btn_priority justify-center hidden md:flex"><a href="#">会社概要へ</a></div>
 	</div>
 	<div class="image_content">
-		<div class="mb-5 md:mb-5 lg:mb-8"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/common/no_image_l.png" alt="画像が見つかりません"></div>
+		<div class="mb-5 md:mb-5 lg:mb-8"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/about/img_about.jpg" alt="株式会社こばやしのイメージ"></div>
 		<div class="flex gap-5 w-full md:gap-5 lg:gap-8">
 			<div><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/common/no_image_s.png" alt="画像が見つかりません"></div>
 			<div><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/common/no_image_s.png" alt="画像が見つかりません"></div>
 		</div>
 	</div>
 </div>
-<div class="btn_priority flex justify-center md:hidden"><a href="#">会社概要へ</a></div>
+<div class="btn_priority flex justify-center md:hidden"><a href="/about/">会社概要へ</a></div>
 </section>
 
 <section class="sect_service color02 container mb-20 mx-auto px-6 md:px-4 lg:mb-[100px] lg:px-5">

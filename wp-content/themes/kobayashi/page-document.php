@@ -39,7 +39,7 @@ $category = get_category_by_slug( $slug );
 	if ($docQuery->have_posts()) :
 		while ($docQuery->have_posts()) :
 			$docQuery->the_post();
-			get_template_part('template-parts/post-document');
+			get_template_part('template-parts/post', 'document');
 		endwhile;
 	endif;
 	?>

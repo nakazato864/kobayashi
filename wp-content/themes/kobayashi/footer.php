@@ -26,7 +26,7 @@
 					<li><a href="/job-description/">募集要項</a></li>
 					<li><a href="/contact/">お問い合わせ</a></li>
 				</ul>
-				<ul class="footer_sub_navgation text-sm">
+				<ul class="footer_sub_navgation text-sm lg:text-base">
 					<li class="mb-3"><a href="/document/">各種書類ダウンロード</a></li>
 					<li><a href="/privacy-policy/">プライバシーポリシー</a></li>
 				</ul>

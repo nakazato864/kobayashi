@@ -143,6 +143,7 @@ h2.hd_decorated{
 		background-size: contain;
 	}
 @include media(lg){
+	margin-bottom: rem(32);
 	font-size: rem(28);
 	>span::after{
 		height: 8px;

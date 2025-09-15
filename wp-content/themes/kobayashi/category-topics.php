@@ -22,7 +22,7 @@ $cat = $cat[0];
 	<ul class="mb-8 lg:w-2/3 lg:mx-auto">
 <?php while ( have_posts() ) :
 		the_post();
-		get_template_part( 'template-parts/post', get_post_type() );
+		get_template_part( 'template-parts/post', $cat->slug );
 	endwhile; ?>
 	</ul>
 	<div class="lg:w-2/3 lg:mx-auto">

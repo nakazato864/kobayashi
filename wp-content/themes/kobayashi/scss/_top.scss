@@ -56,21 +56,6 @@
 }
 
 
-.sect_about{
-	hgroup h1{
-		&::before{
-			left: 0;
-			transform: translate(-80%, -40%);
-		}
-	}
-	img{ border-radius: rem(20);}
-@include media(md){
-	hgroup h1::before{
-		transform: translate(-80%, -60%);
-	}
-}
-}
-
 .sect_service{
 	hgroup h1{
 		&::before{
