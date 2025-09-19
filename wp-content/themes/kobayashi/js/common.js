@@ -11,7 +11,7 @@ $('section a[href^="#"]').click(function() {
 	var adjust = $('header').height();
 	var href= $(this).attr("href");
 	var target = $(href == "#" || href == "" ? 'html' : href);
-	var position = target.offset().top - adjust - 40;
+	var position = target.offset().top - adjust - 24;
 	// console.log("anker", target);
 	$('body,html').animate({scrollTop:position}, 500, 'swing');
 	return false;

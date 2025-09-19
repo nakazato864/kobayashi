@@ -123,7 +123,7 @@
 	</div>
 </section>
 
-<section id="Day" class="mb-20 lg:w-5/6 lg:mx-auto lg:mb-[6.25rem] xl:w-2/3 xl:mb-[7.5rem]">
+<section id="Home" class="mb-20 lg:w-5/6 lg:mx-auto lg:mb-[6.25rem] xl:w-2/3 xl:mb-[7.5rem]">
 	<h2 class="hd_decorated"><span class="inline-block">小規模多機能ホーム</span></h2>
 	<div class="inner mb-4 md:mb-5 md:flex md:gap-8 lg:gap-10">
 		<div class="box_image mb-4 md:w-1/2 md:order-2 md:mb-0"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/service/service05.png" alt="小規模多機能ホームのイラスト"></div>
