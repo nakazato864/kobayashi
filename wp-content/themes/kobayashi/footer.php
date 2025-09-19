@@ -10,13 +10,17 @@
  */
 
 ?>
+<div class="area_fixed fixed">
+	<div class="btn_chatbot mb-2"><a href="#"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/icon/chatbot.svg" alt="チャットボット"></a></div>
+	<div class="btn_pagetop"><a href="#"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/icon/arrow_pagetop.svg" alt="ページの上部へ"></a></div>
+</div>
 
 <footer id="colophon" class="site_footer py-14">
 	<div class="container mx-auto px-6 md:px-4 lg:px-5">
 		<div class="site_footer_logo mb-10"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/logo_Kobayashi_wh.svg" alt="株式会社こばやし"></div>
 		<div class="inner_footer_nav lg:flex lg:gap-8 lg:py-10">
 			<nav class="footer_navgation py-10 lg:w-1/3 lg:py-0 xl:w-5/12">
-				<ul class="footer_navgation_list mb-5 flex flex-wrap justify-between md:w-1/2 lg:w-full xl:justify-start xl:gap-x-8">
+				<ul class="footer_navgation_list mb-5 flex flex-wrap justify-between md:w-1/2 lg:w-full xl:justify-start xl:gap-x-6">
 					<li><a href="/">トップページ</a></li>
 					<li><a href="/category/topics/">トピックス</a></li>
 					<li><a href="/about/">私たちについて</a></li>
@@ -31,7 +35,7 @@
 					<li><a href="/privacy-policy/">プライバシーポリシー</a></li>
 				</ul>
 			</nav>
-			<div class="wrap_office_info mt-10 md:flex md:gap-8 lg:w-2/3 lg:mt-0 xl:w-7/12">
+			<div class="wrap_office_info mt-10 md:flex md:gap-8 lg:w-2/3 lg:mt-3 xl:w-7/12">
 				<div class="office md:w-1/2">
 					<h3 class="mb-1 text-lg font-bold">株式会社こばやし</h3>
 					<p class="mb-1 text-sm font-light"><span class="inline-block">居宅介護支援事業所／</span><span class="inline-block">ヘルパーステーション／</span><span class="inline-block">訪問看護ステーション／</span><span class="inline-block">小規模多機能ホーム</span></p>
@@ -55,6 +59,7 @@
 </footer><!-- #colophon -->
 
 <?php wp_footer(); ?>
+<script src="<?php echo esc_url(get_template_directory_uri()); ?>/js/common.js"></script>
 <?php if ( is_front_page() ) : ?>
 <!-- Swiper -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

@@ -635,6 +635,11 @@ video {
   margin-right: auto;
 }
 
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .-mt-1 {
   margin-top: -0.25rem;
 }
@@ -685,6 +690,10 @@ video {
 
 .mr-2 {
   margin-right: 0.5rem;
+}
+
+.mt-0 {
+  margin-top: 0px;
 }
 
 .mt-1 {
@@ -794,6 +803,10 @@ video {
   flex-wrap: wrap;
 }
 
+.items-end {
+  align-items: flex-end;
+}
+
 .items-center {
   align-items: center;
 }
@@ -884,12 +897,20 @@ video {
   padding-bottom: 1rem;
 }
 
+.pl-0 {
+  padding-left: 0px;
+}
+
 .pt-0 {
   padding-top: 0px;
 }
 
 .pt-12 {
   padding-top: 3rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
 }
 
 .pt-5 {
@@ -1024,6 +1045,10 @@ video {
     order: 2;
   }
 
+  .md\:col-span-3 {
+    grid-column: span 3 / span 3;
+  }
+
   .md\:mb-0 {
     margin-bottom: 0px;
   }
@@ -1080,6 +1105,10 @@ video {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .md\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
@@ -1096,6 +1125,10 @@ video {
     align-items: baseline;
   }
 
+  .md\:justify-start {
+    justify-content: flex-start;
+  }
+
   .md\:justify-between {
     justify-content: space-between;
   }
@@ -1110,6 +1143,11 @@ video {
 
   .md\:gap-8 {
     gap: 2rem;
+  }
+
+  .md\:gap-x-8 {
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
   }
 
   .md\:p-4 {
@@ -1133,8 +1171,16 @@ video {
     padding-left: 1.25rem;
   }
 
+  .md\:pt-5 {
+    padding-top: 1.25rem;
+  }
+
   .md\:text-center {
     text-align: center;
+  }
+
+  .md\:text-right {
+    text-align: right;
   }
 }
 
@@ -1200,8 +1246,16 @@ video {
     margin-top: 5rem;
   }
 
+  .lg\:mt-3 {
+    margin-top: 0.75rem;
+  }
+
   .lg\:mt-4 {
     margin-top: 1rem;
+  }
+
+  .lg\:mt-6 {
+    margin-top: 1.5rem;
   }
 
   .lg\:mt-\[3\.75rem\] {
@@ -1274,6 +1328,11 @@ video {
 
   .lg\:gap-8 {
     gap: 2rem;
+  }
+
+  .lg\:gap-x-10 {
+    -moz-column-gap: 2.5rem;
+         column-gap: 2.5rem;
   }
 
   .lg\:p-8 {
@@ -1358,6 +1417,11 @@ video {
 
   .xl\:justify-end {
     justify-content: flex-end;
+  }
+
+  .xl\:gap-x-6 {
+    -moz-column-gap: 1.5rem;
+         column-gap: 1.5rem;
   }
 
   .xl\:gap-x-8 {

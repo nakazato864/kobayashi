@@ -36,8 +36,9 @@ get_header();
 		the_post();
 		if($slug == 'about'){
 			get_template_part( 'template-parts/content', 'about' );
+		} else if($slug == 'service'){
+			get_template_part( 'template-parts/content', 'service' );
 		}
-
 	endwhile; // End of the loop.
 	?>
 

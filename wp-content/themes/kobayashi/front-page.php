@@ -157,7 +157,7 @@ if ($faqQuery->have_posts()) :
 	<div class="box_contents mb-8 md:flex md:gap-6 lg:w-5/6 lg:mx-auto lg:mb-[3.75rem] lg:gap-8">
 		<div class="box mb-6 md:mb-0 md:w-1/2">
 			<h3 class="hd_mark">株式会社こばやし</h3>
-			<ul class="mb-2 lg:mb-5 lg:flex lg:flex-wrap">
+			<ul class="mt-0 mb-2 lg:mb-5 lg:flex lg:flex-wrap">
 				<li class="lg:w-1/2">居宅介護支援事業所</li>
 				<li class="lg:w-1/2">ヘルパーステーション</li>
 				<li class="lg:w-1/2">訪問看護ステーション</li>
@@ -168,7 +168,7 @@ if ($faqQuery->have_posts()) :
 		</div>
 		<div class="box md:w-1/2">
 			<h3 class="hd_mark">サービス付き高齢者住宅「悠優」</h3>
-			<ul class="mb-2 lg:mb-5 lg:flex lg:flex-wrap">
+			<ul class="mt-0 mb-2 lg:mb-5 lg:flex lg:flex-wrap">
 				<li class="lg:w-1/2">サービス付き高齢者住宅</li>
 				<li class="lg:w-1/2">デイサービス</li>
 				<li class="lg:w-1/2">介護タクシー</li>
