@@ -36,16 +36,26 @@
 			<p><?php the_field('txt_caremanager'); ?></p>
 		</div>
 	</div>
-	<div class="area_document pt-4 md:pt-5 md:text-right lg:pt6">
 	<?php
-	$post = get_page_by_path( '居宅介護支援運営規程', OBJECT, 'files' );
-	if ( $post ) : ?>
+	$docName = [
+		'居宅介護支援運営規程',
+	];
+	$cnt = 0;
+	foreach ($docName as $name) :
+		$post = get_page_by_path( $name, OBJECT, 'files' );
+		if ( $post ) :
+			if($cnt == 0) : ?>
+		<div class="area_document pt-4 md:pt-5 md:text-right lg:pt6">
+		<?php endif; ?>
 		<div><p class="inline-block">
 			<a href="<?php echo the_field('pdf_file', $post->post_content); ?>" download="<?php echo esc_html( $post->post_title ); ?>.pdf"><?php echo esc_html( $post->post_title ); ?></a>
 			<small><?php echo the_field('data_issue', $post->post_content); ?></small>
 		</p></div>
-	<?php endif; wp_reset_postdata(); ?>
+		<?php $cnt++; endif;
+	endforeach;
+	if($cnt > 0) : ?>
 	</div>
+	<?php  endif; wp_reset_postdata(); ?>
 </section>
 
 <section id="Kaigo" class="mb-20 lg:w-5/6 lg:mx-auto lg:mb-[6.25rem] xl:w-2/3 xl:mb-[7.5rem]">
@@ -63,16 +73,26 @@
 		<div class="box"><?php the_field('content_kaigo03'); ?></div>
 	</div>
 	<div class="btn_priority flex justify-center my-8"><a href="#">訪問介護の料金</a></div>
-	<div class="area_document pt-4 md:pt-5 md:text-right lg:pt6">
 	<?php
-	$post = get_page_by_path( '訪問介護運営規程', OBJECT, 'files' );
-	if ( $post ) : ?>
-		<p class="inline-block">
+	$docName = [
+		'訪問介護運営規程',
+	];
+	$cnt = 0;
+	foreach ($docName as $name) :
+		$post = get_page_by_path( $name, OBJECT, 'files' );
+		if ( $post ) :
+			if($cnt == 0) : ?>
+		<div class="area_document pt-4 md:pt-5 md:text-right lg:pt6">
+		<?php endif; ?>
+		<div><p class="inline-block">
 			<a href="<?php echo the_field('pdf_file', $post->post_content); ?>" download="<?php echo esc_html( $post->post_title ); ?>.pdf"><?php echo esc_html( $post->post_title ); ?></a>
 			<small><?php echo the_field('data_issue', $post->post_content); ?></small>
-		</p>
-	<?php endif; wp_reset_postdata(); ?>
+		</p></div>
+		<?php $cnt++; endif;
+	endforeach;
+	if($cnt > 0) : ?>
 	</div>
+	<?php  endif; wp_reset_postdata(); ?>
 </section>
 
 <section id="Kango" class="mb-20 lg:w-5/6 lg:mx-auto lg:mb-[6.25rem] xl:w-2/3 xl:mb-[7.5rem]">
@@ -87,16 +107,26 @@
 			</div>
 		</div>
 	</div>
-	<div class="area_document pt-4 md:pt-5 md:text-right lg:pt6">
 	<?php
-	$post = get_page_by_path( '訪問看護運営規程', OBJECT, 'files' );
-	if ( $post ) : ?>
-		<p class="inline-block">
+	$docName = [
+		'訪問看護運営規程',
+	];
+	$cnt = 0;
+	foreach ($docName as $name) :
+		$post = get_page_by_path( $name, OBJECT, 'files' );
+		if ( $post ) :
+			if($cnt == 0) : ?>
+		<div class="area_document pt-4 md:pt-5 md:text-right lg:pt6">
+		<?php endif; ?>
+		<div><p class="inline-block">
 			<a href="<?php echo the_field('pdf_file', $post->post_content); ?>" download="<?php echo esc_html( $post->post_title ); ?>.pdf"><?php echo esc_html( $post->post_title ); ?></a>
 			<small><?php echo the_field('data_issue', $post->post_content); ?></small>
-		</p>
-	<?php endif; wp_reset_postdata(); ?>
+		</p></div>
+		<?php $cnt++; endif;
+	endforeach;
+	if($cnt > 0) : ?>
 	</div>
+	<?php  endif; wp_reset_postdata(); ?>
 </section>
 
 <section id="Day" class="mb-20 lg:w-5/6 lg:mx-auto lg:mb-[6.25rem] xl:w-2/3 xl:mb-[7.5rem]">
@@ -111,16 +141,26 @@
 			</div>
 		</div>
 	</div>
-	<div class="area_document pt-4 md:pt-5 md:text-right lg:pt6">
 	<?php
-	$post = get_page_by_path( 'デイサービス運営規程', OBJECT, 'files' );
-	if ( $post ) : ?>
-		<p class="inline-block">
+	$docName = [
+		'デイサービス運営規程',
+	];
+	$cnt = 0;
+	foreach ($docName as $name) :
+		$post = get_page_by_path( $name, OBJECT, 'files' );
+		if ( $post ) :
+			if($cnt == 0) : ?>
+		<div class="area_document pt-4 md:pt-5 md:text-right lg:pt6">
+		<?php endif; ?>
+		<div><p class="inline-block">
 			<a href="<?php echo the_field('pdf_file', $post->post_content); ?>" download="<?php echo esc_html( $post->post_title ); ?>.pdf"><?php echo esc_html( $post->post_title ); ?></a>
 			<small><?php echo the_field('data_issue', $post->post_content); ?></small>
-		</p>
-	<?php endif; wp_reset_postdata(); ?>
+		</p></div>
+		<?php $cnt++; endif;
+	endforeach;
+	if($cnt > 0) : ?>
 	</div>
+	<?php  endif; wp_reset_postdata(); ?>
 </section>
 
 <section id="Home" class="mb-20 lg:w-5/6 lg:mx-auto lg:mb-[6.25rem] xl:w-2/3 xl:mb-[7.5rem]">
@@ -137,24 +177,27 @@
 		<div class="box mb-2 md:mb-0"><?php the_field('content_home02'); ?></div>
 		<div class="box"><?php the_field('content_home03'); ?></div>
 	</div>
-	<div class="area_document pt-4 md:pt-5 md:text-right lg:pt6">
 	<?php
-	$post = get_page_by_path( '小規模多機能ホーム運営規程', OBJECT, 'files' );
-	if ( $post ) : ?>
+	$docName = [
+		'小規模多機能ホーム運営規程',
+		'小規模多機能型居宅介護「サービス評価」総括表'
+	];
+	$cnt = 0;
+	foreach ($docName as $name) :
+		$post = get_page_by_path( $name, OBJECT, 'files' );
+		if ( $post ) :
+			if($cnt == 0) : ?>
+		<div class="area_document pt-4 md:pt-5 md:text-right lg:pt6">
+		<?php endif; ?>
 		<div><p class="inline-block">
 			<a href="<?php echo the_field('pdf_file', $post->post_content); ?>" download="<?php echo esc_html( $post->post_title ); ?>.pdf"><?php echo esc_html( $post->post_title ); ?></a>
 			<small><?php echo the_field('data_issue', $post->post_content); ?></small>
 		</p></div>
-	<?php endif; wp_reset_postdata(); ?>
-	<?php
-	$post = get_page_by_path( '小規模多機能型居宅介護「サービス評価」総括表', OBJECT, 'files' );
-	if ( $post ) : ?>
-		<div><p class="inline-block">
-			<a href="<?php echo the_field('pdf_file', $post->post_content); ?>" download="<?php echo esc_html( $post->post_title ); ?>.pdf"><?php echo esc_html( $post->post_title ); ?></a>
-			<small><?php echo the_field('data_issue', $post->post_content); ?></small>
-		</p></div>
-	<?php endif; wp_reset_postdata(); ?>
+		<?php $cnt++; endif;
+	endforeach;
+	if($cnt > 0) : ?>
 	</div>
+	<?php  endif; wp_reset_postdata(); ?>
 </section>
 
 <section id="SeniorHousing" class="mb-20 lg:w-5/6 lg:mx-auto lg:mb-[6.25rem] xl:w-2/3 xl:mb-[7.5rem]">
@@ -165,8 +208,8 @@
 			<p><?php the_field('txt_seniorhousing'); ?></p>
 		</div>
 	</div>
-	<div class="sub_contents mb-4 md:mb-5 md:grid md:grid-cols-3 md:gap-x-8 lg:gap-x-10">
-		<h3 class="hd_mark md:col-span-3">主なサービス</h3>
+	<div class="sub_contents mb-4 md:mb-5 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-4 lg:gap-x-10">
+		<h3 class="hd_mark md:mb-0 md:col-span-3">主なサービス</h3>
 		<?php the_field('content_seniorhousing'); ?>
 	</div>
 </section>
@@ -183,14 +226,24 @@
 			</div>
 		</div>
 	</div>
-	<div class="area_document pt-4 md:pt-5 md:text-right lg:pt6">
 	<?php
-	$post = get_page_by_path( '介護タクシー運営規程', OBJECT, 'files' );
-	if ( $post ) : ?>
-		<p class="inline-block">
+	$docName = [
+		'介護タクシー運営規程'
+	];
+	$cnt = 0;
+	foreach ($docName as $name) :
+		$post = get_page_by_path( $name, OBJECT, 'files' );
+		if ( $post ) :
+			if($cnt == 0) : ?>
+		<div class="area_document pt-4 md:pt-5 md:text-right lg:pt6">
+		<?php endif; ?>
+		<div><p class="inline-block">
 			<a href="<?php echo the_field('pdf_file', $post->post_content); ?>" download="<?php echo esc_html( $post->post_title ); ?>.pdf"><?php echo esc_html( $post->post_title ); ?></a>
 			<small><?php echo the_field('data_issue', $post->post_content); ?></small>
-		</p>
-	<?php endif; wp_reset_postdata(); ?>
+		</p></div>
+		<?php $cnt++; endif;
+	endforeach;
+	if($cnt > 0) : ?>
 	</div>
+	<?php  endif; wp_reset_postdata(); ?>
 </section>

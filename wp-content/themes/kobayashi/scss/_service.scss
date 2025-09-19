@@ -156,5 +156,16 @@ section{
 }
 }
 
+@at-root &#SeniorHousing{
+	.sub_contents{
+		.box:nth-child(n+1){
+			margin-top: 8px;
+			@include media(md){
+				margin-top: 0;
+			}
+		}
+	}
+}
+
 }
 }

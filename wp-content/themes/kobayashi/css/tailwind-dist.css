@@ -1150,6 +1150,10 @@ video {
          column-gap: 2rem;
   }
 
+  .md\:gap-y-4 {
+    row-gap: 1rem;
+  }
+
   .md\:p-4 {
     padding: 1rem;
   }
