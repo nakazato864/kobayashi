@@ -38,6 +38,8 @@ get_header();
 			get_template_part( 'template-parts/content', 'about' );
 		} else if($slug == 'service'){
 			get_template_part( 'template-parts/content', 'service' );
+		} else if($slug == 'contact'){
+			get_template_part( 'template-parts/content', 'contact' );
 		}
 	endwhile; // End of the loop.
 	?>

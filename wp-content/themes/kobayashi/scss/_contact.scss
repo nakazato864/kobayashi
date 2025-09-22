@@ -1,0 +1,227 @@
+@use "sass:math";
+@use "variables" as *;
+
+//==================================================
+//	Contact
+//==================================================
+.sect_contact{
+	hgroup h1{
+		&::before{
+			top: 45%;
+			left: 90%;
+		}
+	}
+
+	.box_contents{
+		ul{
+			padding-left: 1.333em;
+			li{
+				color: $Text-400;
+				font-size: rem(15);
+				line-height: 1.5em;
+				list-style-type: disc;
+			}
+		}
+		.txt_tel, .txt_fax{
+			color: $Orange;
+			font-family: $fn-Manrope;
+			line-height: 1.0em;
+			letter-spacing: -.02em;
+			a{
+				color: $Orange;
+				text-decoration: none;
+			}
+			>span{
+				display: inline-block;
+				padding: 0 0.5rem;
+				color: $White;
+				letter-spacing: normal;
+				line-height: 1.5em;
+				background-color: $Orange;
+				border-radius: 100px;
+			}
+		}
+		.txt_tel{
+			font-size: 2rem;
+			font-weight: 800;
+			a:hover{
+				color: $Orange;
+				opacity: 0.8;
+			}
+			>span{
+				font-size: 1rem;
+			}
+		}
+		.txt_fax{
+			font-size: rem(24);
+			font-weight: 700;
+			>span{
+				font-size: rem(14);
+			}
+		}
+	}
+	.box_image{
+		>img{
+			margin: 0 auto;
+			width: calc(160 / 375 * 100vw);
+			max-width: 304px;
+		}
+	}
+
+@include media(lg){
+	.box_contents{
+		ul{
+			li{
+				font-size: 1rem;
+			}
+		}
+		.txt_tel{ font-size: rem(36); }
+	}
+}
+
+// page
+section form{
+	h3.hd_mark,
+	[data-name="acceptance"] .wpcf7-list-item label{
+		&::after{
+			content: '必須';
+			padding: 0 rem(4);
+			color: $White;
+			font-size: rem(11);
+			line-height: 1.7em;
+			letter-spacing: 0;
+			background-color: $Orange;
+			border-radius: 4px;
+			position: relative;
+			top: -3px;
+		}
+	}
+	.wpcf7-list-item{
+		display: block;
+		margin-left: 0;
+	}
+	.wpcf7-form-control-wrap{
+		display: block;
+		margin-bottom: rem(24);
+	}
+	.service_detail{ display: none; }
+
+	[data-name="youken"] .wpcf7-list-item{
+		padding: 4px 0;
+	}
+	[data-name="kaigo-service"]{
+		display: block;
+		margin-bottom: 0;
+		padding-left: rem(24);
+	}
+	input[type="radio"],
+	input[type="checkbox"]{
+		margin-right: rem(8);
+	}
+	input[type="text"],
+	input[type="tel"],
+	textarea{
+		width: 100%;
+		padding: rem(8) 1rem;
+		line-height: 1.5em;
+		background-color: $White;
+		border: 1px solid $Text-100;
+		border-radius: rem(8);
+	}
+	textarea{
+		height: calc(7.5em + 1rem);
+	}
+	[data-name="acceptance"]{ padding: 0.5rem 0; }
+	.wpcf7-acceptance{
+		.wpcf7-list-item-label{
+			font-weight: 500;
+		}
+	}
+
+	.btn_submit{
+		position: relative;
+
+		input{
+			cursor: pointer;
+			display: block;
+			width: 200px;
+			margin-left: 24px;
+			padding: rem(16) rem(60) rem(16) rem(40);
+			color: $White;
+			font-size: rem(18);
+			font-weight: 700;
+			text-box: trim-both text;
+			text-align: center;
+			text-decoration: none;
+			background: $Orange url(../images/icon/arrow_right.svg) calc(100% - 20px) 50% no-repeat;
+			background-size: 24px 24px;
+			border-radius: 100px;
+			box-shadow: 0 1px 4px rgba($Black, 0.2);
+			position: relative;
+			transition: all 0.2s;
+			&:hover{
+				color: $White;
+				background-color: rgba($Orange, 0.9);
+				background-position: calc(100% - 12px) 50%;
+			}
+		}
+		.wpcf7-spinner{
+			display: block;
+			margin: 0;
+			// position: absolute;
+			// top: 0;
+			// right: 0;
+		}
+	}
+
+	@include media(md){
+		.service_detail .wpcf7-checkbox{
+			display: flex;
+			flex-wrap: wrap;
+
+			.wpcf7-list-item{
+				width: 50%;
+			}
+		}
+	}
+	@include media(lg){
+		.wpcf7-form-control-wrap{
+			margin-bottom: rem(32);
+		}
+		[data-name="kaigo-service"]{ margin-bottom: 0; }
+		.service_detail .wpcf7-checkbox .wpcf7-list-item{
+			font-size: rem(17);
+		}
+	}
+}
+}
+
+.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output, .wpcf7 form.payment-required .wpcf7-response-output{
+	border-color: $Orange;
+	border-radius: rem(8);
+	background-color: $White;
+}
+.wpcf7-not-valid-tip{
+	font-size: rem(14);
+	@include media(lg){
+		font-size: 1rem;
+	}
+}
+.wpcf7 form .wpcf7-response-output{
+	margin: rem(24) 0 0;
+	padding: 0.5rem 1rem;
+	@include media(lg){
+		margin-top: 2rem;
+		text-align: center;
+		padding: 1rem 1.5rem;
+	}
+}
+.wpcf7 form.sent .wpcf7-response-output{
+	background-color: $White;
+	border-color: $Scooter;
+	border-radius: rem(8);
+	@include media(lg){
+		text-align: center;
+		padding: 1rem 1.5rem;
+	}
+}

@@ -57,6 +57,12 @@ function dequeue_jquery_migrate($scripts)
   }
 }
 
+// Contact Form 7の自動pタグ無効
+add_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false');
+function wpcf7_autop_return_false() {
+  return false;
+}
+
 /* 管理画面メニューから「コメント」を非表示 */
 function remove_menus()
 {

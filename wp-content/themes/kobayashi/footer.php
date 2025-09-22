@@ -64,6 +64,9 @@
 <!-- Swiper -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="<?php echo esc_url(get_template_directory_uri()); ?>/js/swiper.js"></script>
+<?php elseif ( is_page('contact') ) : ?>
+<script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
+<script src="<?php echo esc_url(get_template_directory_uri()); ?>/js/form.js"></script>
 <?php endif; ?>
 
 </body>
