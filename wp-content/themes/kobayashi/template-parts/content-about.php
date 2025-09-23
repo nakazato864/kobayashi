@@ -6,7 +6,6 @@
  *
  * @package kobayashi
  */
-
 ?>
 
 <div class="inner mb-20 md:flex md:gap-8 lg:w-5/6 lg:mx-auto lg:mb-[6.25rem] lg:gap-10 xl:mb-[7.5rem]">

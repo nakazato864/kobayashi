@@ -69,31 +69,31 @@ get_header();
 		<h1 class="inline-block">事業サービス<small class="block">service</small></h1>
 	</hgroup>
 	<ul class="grid grid-cols-2 gap-4 mb-8 md:grid-cols-4 md:gap-5 lg:gap-8 lg:mb-14">
-		<li><a href="#">
+		<li><a href="/service/#Kyotaku">
 			<img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/img_service01.png" alt="居宅介護支援">
 			<p class="mt-3 text-left lg:mt-4 lg:text-center">居宅介護支援</p>
 		</a></li>
-		<li><a href="#">
+		<li><a href="/service/#Kaigo">
 			<img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/img_service02.png" alt="訪問介護（ヘルパーステーション）">
 			<p class="mt-3 text-left lg:mt-4 lg:text-center">訪問介護<br><small class="text-sm">（ヘルパーステーション）</small></p>
 		</a></li>
-		<li><a href="#">
+		<li><a href="/service/#Kango">
 			<img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/img_service03.png" alt="訪問看護">
 			<p class="mt-3 text-left lg:mt-4 lg:text-center">訪問看護</p>
 		</a></li>
-		<li><a href="#">
+		<li><a href="/service/#Day">
 			<img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/img_service04.png" alt="デイサービス">
 			<p class="mt-3 text-left lg:mt-4 lg:text-center">デイサービス</p>
 		</a></li>
-		<li><a href="#">
+		<li><a href="/service/#Home">
 			<img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/img_service05.png" alt="小規模多機能ホーム">
 			<p class="mt-3 text-left lg:mt-4 lg:text-center">小規模<span class="inline-block">多機能ホーム</span></p>
 		</a></li>
-		<li><a href="#">
+		<li><a href="/service/#SeniorHousing">
 			<img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/img_service06.png" alt="サービス付高齢者住宅">
 			<p class="mt-3 text-left lg:mt-4 lg:text-center">サービス付<span class="lg:inline-block">高齢者住宅</span></p>
 		</a></li>
-		<li><a href="#">
+		<li><a href="/service/#Taxi">
 			<img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/img_service07.png" alt="介護タクシー">
 			<p class="mt-3 text-left lg:mt-4 lg:text-center">介護タクシー</p>
 		</a></li>

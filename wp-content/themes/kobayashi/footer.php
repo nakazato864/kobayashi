@@ -67,6 +67,8 @@
 <?php elseif ( is_page('contact') ) : ?>
 <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
 <script src="<?php echo esc_url(get_template_directory_uri()); ?>/js/form.js"></script>
+<?php elseif ( is_page('recruit') ) : ?>
+<script src="<?php echo esc_url(get_template_directory_uri()); ?>/js/interview.js"></script>
 <?php endif; ?>
 
 </body>

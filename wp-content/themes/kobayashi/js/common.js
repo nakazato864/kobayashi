@@ -7,7 +7,7 @@ $('.btn_pagetop a').click(function () {
 });
 
 // Anker link
-$('section a[href^="#"]').click(function() {
+$('section a[href^="#"]').not('.interview_tab a[href*="#interview"]').click(function() {
 	var adjust = $('header').height();
 	var href= $(this).attr("href");
 	var target = $(href == "#" || href == "" ? 'html' : href);
@@ -20,7 +20,7 @@ $('section a[href^="#"]').click(function() {
 // other page Anker link
 $(window).on('load', function() {
 	const url = $(location).attr('href');
-	headerHeight = $('header').outerHeight() + 20;
+	headerHeight = $('header').outerHeight() + 40;
 	if(url.indexOf("#") != -1){
 		const anchor = url.split("#");
 		target = $('#' + anchor[anchor.length - 1]);

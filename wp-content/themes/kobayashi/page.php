@@ -38,6 +38,9 @@ get_header();
 			get_template_part( 'template-parts/content', 'about' );
 		} else if($slug == 'service'){
 			get_template_part( 'template-parts/content', 'service' );
+		} else if($slug == 'recruit'){
+			get_template_part( 'template-parts/content', 'recruit' );
+			get_template_part( 'template-parts/content', 'interview' );
 		} else if($slug == 'contact'){
 			get_template_part( 'template-parts/content', 'contact' );
 		}

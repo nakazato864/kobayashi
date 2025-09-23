@@ -1,0 +1,132 @@
+@use "sass:math";
+@use "variables" as *;
+
+//==================================================
+//	Recruit
+//==================================================
+.sect_recruit{
+	hgroup h1{
+		&::before{
+			top: 30%;
+			left: -45%;
+		}
+	}
+	img{
+		border-radius: rem(20);
+	}
+	.area_message{
+		h3{
+			font-weight: 500;
+			margin-bottom: rem(20);
+		}
+	}
+	.area_benefits{
+		ul{
+			color: $Text-400;
+			li{
+				span{
+					display: block;
+					font-size: rem(15);
+					font-weight: 300;
+					line-height: 1.5em;
+				}
+			}
+		@include media(md){
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			li{
+				width: calc(50% - 2rem);
+			}
+		}
+		}
+	}
+
+	.area_interview{
+		.interview_tab{
+			list-style-type: none;
+			padding: 0;
+			&::before, &::after{
+				content: '';
+				display: block;
+				width: 16px;
+				height: 2px;
+				background-color: $Scooter;
+			}
+			li{
+				width: 50%;
+				a{
+					display: block;
+					padding: rem(8) 1rem rem(4);
+					text-decoration: none;
+					text-align: center;
+					color: $White;
+					font-size: rem(18);
+					font-weight: 600;
+					line-height: 1.5em;
+					border-width: 2px 2px 0 2px;
+					border-style: solid;
+					border-color: $Scooter;
+					border-radius: 1rem 1rem 0 0;
+					background-color: $Scooter;
+					transition: all 0.2s;
+					&:hover{
+						opacity: 0.8;
+					}
+				}
+				&.active a{
+					color: $Scooter;
+					background-color: initial;
+					&:hover{ opacity: 1; }
+				}
+			}
+		@include media(md){
+			&::after{
+				width: auto;
+				flex-grow: 1;
+			}
+			li{
+				width: 25%;
+				max-width: 240px;
+			}
+		}
+		}
+
+		.interview_wrapper{
+			display: none;
+			opacity: 0;
+			&.is_active{
+				display: block;
+				animation-name: displayAnime;
+				animation-duration: 1.5s;
+				animation-fill-mode: forwards;
+			}
+
+			h4.hd_question{
+				display: flex;
+				align-items: baseline;
+				gap: rem(12);
+				border-bottom: 1px dotted rgba($Brown-400, .15);
+				&::before{
+					content: 'Q.';
+					color: $Scooter;
+					font-family: $fn-Fredoka;
+					font-weight: 600;
+					font-size: 2rem;
+					line-height: 100%;
+				}
+			@include media(lg){
+				font-size: rem(20);
+				&::before{
+					font-size: rem(40);
+				}
+			}
+			}
+		}
+	}
+}
+
+@keyframes displayAnime{
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
