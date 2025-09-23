@@ -28,7 +28,11 @@ get_header();
 <main id="primary" class="site_main <?php echo get_post_field('post_name',get_the_ID()); ?> <?php echo get_post_type(); ?>">
 <section class="sect_<?php echo $slug; ?> <?php echo $color; ?> container mb-20 mx-auto px-6 md:px-4 lg:mb-[6.25rem] lg:px-5 xl:mb-[7.5rem]">
 	<hgroup class="mt-10 mb-20 text-center md:mt-16 lg:mt-20 lg:mb-[6.25rem]">
+		<?php if($slug == 'job-description') : ?>
+		<h1 class="inline-block"><?php the_title(); ?><small class="block">job description</small></h1>
+		<?php else : ?>
 		<h1 class="inline-block"><?php the_title(); ?><small class="block"><?php echo $slug; ?></small></h1>
+		<?php endif ?>
 	</hgroup>
 
 	<?php
@@ -41,8 +45,12 @@ get_header();
 		} else if($slug == 'recruit'){
 			get_template_part( 'template-parts/content', 'recruit' );
 			get_template_part( 'template-parts/content', 'interview' );
+		} else if($slug == 'job-description'){
+			get_template_part( 'template-parts/content', 'description' );
 		} else if($slug == 'contact'){
 			get_template_part( 'template-parts/content', 'contact' );
+		} else if($slug == 'entry'){
+			get_template_part( 'template-parts/content', 'entry' );
 		}
 	endwhile; // End of the loop.
 	?>

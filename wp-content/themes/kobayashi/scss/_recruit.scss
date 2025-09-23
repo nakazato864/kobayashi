@@ -130,3 +130,89 @@
 	from { opacity: 0; }
 	to { opacity: 1; }
 }
+
+//==================================================
+//	Job Description
+//==================================================
+.sect_job-description{
+hgroup h1{
+	&::before{
+		top: 30%;
+		left: initial;
+		right: 70%;
+	}
+}
+table{
+	color: $Text-400;
+	b{ font-weight: 500; }
+	th, td{
+		font-size: rem(15);
+		line-height: 1.5em;
+		border-top: 1px dashed $Text-100;
+		border-bottom: 1px dashed $Text-100;
+	}
+	th{
+		width: calc(5em + 24px);
+		font-weight: 500;
+		text-align: left;
+		background-color: rgba($Scooter, 0.1);
+	}
+	td{
+		background-color: $White;
+		p{
+			font-size: rem(15);
+			line-height: 1.5em;
+		}
+		small{
+			font-size: rem(14);
+			line-height: 1.333em;
+		}
+	}
+
+@include media(md){
+	th, td{
+		font-size: 1rem;
+	}
+	th{
+		width: 20%;
+	}
+	td{
+		p{ font-size: 1rem; }
+		small{ font-size: rem(15); }
+		ul+p{ margin-top: rem(4); }
+	}
+}
+
+@include media(lg){
+	th{ font-size: rem(17); }
+}
+}
+}
+
+//==================================================
+//	Entry
+//==================================================
+.sect_entry{
+hgroup h1{
+	&::before{
+		top: 30%;
+		left: initial;
+		right: 70%;
+	}
+}
+section form{
+	h3.hd_mark,
+	[data-name="acceptance"] .wpcf7-list-item label{
+		&::after{
+			background-color: $Scooter;
+		}
+		&.optional::after{ display: none; }
+	}
+	.btn_submit input{
+		background-color: $Scooter;
+		&:hover{
+			background-color: rgba($Scooter, 0.9);
+		}
+	}
+}
+}

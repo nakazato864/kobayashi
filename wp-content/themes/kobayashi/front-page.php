@@ -51,13 +51,13 @@ get_header();
 			<h1 class="inline-block">私たちについて<small class="block">about</small></h1>
 		</hgroup>
 		<p class="md:mb-8 lg:mb-14">住み慣れた町で「ずっと暮らしていたい」。<br>そう願っている高齢者や障害者のために、私たちこばやしは医療や看護・介護に携わるスタッフたちと手を取り合い、その願いを叶えるお手伝いをいたします。</p>
-		<div class="btn_priority justify-center hidden md:flex"><a href="#">会社概要へ</a></div>
+		<div class="btn_priority justify-center hidden md:flex"><a href="/about/">会社概要へ</a></div>
 	</div>
 	<div class="image_content">
 		<div class="mb-5 md:mb-5 lg:mb-8"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/about/img_about.jpg" alt="株式会社こばやしのイメージ"></div>
 		<div class="flex gap-5 w-full md:gap-5 lg:gap-8">
-			<div><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/common/no_image_s.png" alt="画像が見つかりません"></div>
-			<div><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/common/no_image_s.png" alt="画像が見つかりません"></div>
+			<div><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/about/img_about02.jpg" alt="介護イメージ"></div>
+			<div><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/about/img_about03.jpg" alt="介護イメージ"></div>
 		</div>
 	</div>
 </div>
@@ -138,13 +138,13 @@ if ($faqQuery->have_posts()) :
 		<div class="mb-5 relative z-10 md:hidden"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/common/no_image_l.png" alt="画像が見つかりません" class="rounded-2xl"></div>
 		<p class="mb-8 lg:mb-14">株式会社こばやしでは、地域や利用者さまに喜んでもらえるサービスを提供しています。<br>「こばやし」で私たちと一緒に働きませんか？</p>
 		<div class="btn_priority flex justify-center flex-wrap gap-5">
-			<a href="#">採用情報へ</a>
-			<a href="#">募集要項へ</a>
+			<a href="/recruit/">採用情報へ</a>
+			<a href="/job-description/">募集要項へ</a>
 		</div>
-		<div class="btn_secondary flex justify-center mt-5"><a href="#">エントリーフォームへ</a></div>
+		<div class="btn_secondary flex justify-center mt-5"><a href="/entry/">エントリーフォームへ</a></div>
 	</div>
 	<div class="image_content hidden md:block md:order-1">
-		<div class=""><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/common/no_image_l.png" alt="画像が見つかりません"></div>
+		<div class=""><img src="<?php the_field('img_recruit01', 17); ?>" alt="採用イメージ"></div>
 	</div>
 </div>
 </section>

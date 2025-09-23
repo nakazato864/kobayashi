@@ -9,7 +9,7 @@
 
 ?>
 
-<div class="inner mb-20 md:flex md:gap-8 lg:w-5/6 lg:mx-auto lg:mb-[6.25rem] lg:gap-10 xl:w-2/3 xl:mb-[7.5rem]">
+<div class="inner mb-20 lg:w-5/6 lg:mx-auto lg:mb-[6.25rem] xl:w-2/3 xl:mb-[7.5rem]">
 	<ul class="area_link pl-0 flex flex-wrap justify-between items-end md:justify-start">
 		<li class="text-sm font-medium"><a href="#Kyotaku">居宅介護支援</a></li>
 		<li class="text-sm font-medium"><a href="#Kaigo">訪問介護</a></li>

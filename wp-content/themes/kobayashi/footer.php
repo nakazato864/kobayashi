@@ -50,7 +50,7 @@
 					<p class="text-sm mb-1">〒914-0137<br>福井県敦賀市ひばりケ丘町1008番</p>
 					<p class="txt_tel"><span class="mr-2 text-sm font-semibold">TEL</span><a href="tel:0770-25-8008" class="font-bold text-2xl">0770-25-8008</a></p>
 					<p class="txt_fax -mt-1 font-semibold"><span class="mr-2 text-sm">FAX</span><span>0770-25-8007</span></p>
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1441.6937459889116!2d136.0399974920966!3d35.622921069144496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6001e540bce4d073%3A0x6977aa0203c5c914!2z44CSOTE0LTAxMzcg56aP5LqV55yM5pWm6LOA5biC44Gy44Gw44KK44Kx5LiY55S677yR77yR77yQ77yZ!5e0!3m2!1sja!2sjp!4v1752474265610!5m2!1sja!2sjp" width="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="mt-4 aspect-[4/3] rounded-lg"></iframe>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1800.6738999774268!2d136.0401146917108!3d35.62341973403737!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6001e50047a018b7%3A0xd2696d56d9efad6b!2z44K144O844OT44K55LuY44GN6auY6b2i6ICF5L2P5a6F44CM5oKg5YSq44CN!5e0!3m2!1sja!2sjp!4v1758615476778!5m2!1sja!2sjp" width="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="mt-4 aspect-[4/3] rounded-lg"></iframe>
 				</div>
 			</div>
 		</div>
@@ -64,11 +64,12 @@
 <!-- Swiper -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="<?php echo esc_url(get_template_directory_uri()); ?>/js/swiper.js"></script>
-<?php elseif ( is_page('contact') ) : ?>
-<script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
-<script src="<?php echo esc_url(get_template_directory_uri()); ?>/js/form.js"></script>
 <?php elseif ( is_page('recruit') ) : ?>
 <script src="<?php echo esc_url(get_template_directory_uri()); ?>/js/interview.js"></script>
+<?php elseif ( is_page('entry') || is_page('contact') ) : ?>
+<script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
+<?php elseif ( is_page('contact') ) : ?>
+<script src="<?php echo esc_url(get_template_directory_uri()); ?>/js/form.js"></script>
 <?php endif; ?>
 
 </body>

@@ -78,8 +78,10 @@
 		.txt_tel{ font-size: rem(36); }
 	}
 }
+}
 
-// page
+.sect_contact, .sect_entry{
+// FORM
 section form{
 	h3.hd_mark,
 	[data-name="acceptance"] .wpcf7-list-item label{
@@ -90,7 +92,7 @@ section form{
 			font-size: rem(11);
 			line-height: 1.7em;
 			letter-spacing: 0;
-			background-color: $Orange;
+			// background-color: $Orange;
 			border-radius: 4px;
 			position: relative;
 			top: -3px;
@@ -120,6 +122,7 @@ section form{
 	}
 	input[type="text"],
 	input[type="tel"],
+	input[type="email"],
 	textarea{
 		width: 100%;
 		padding: rem(8) 1rem;
@@ -153,7 +156,9 @@ section form{
 			text-box: trim-both text;
 			text-align: center;
 			text-decoration: none;
-			background: $Orange url(../images/icon/arrow_right.svg) calc(100% - 20px) 50% no-repeat;
+			background-image: url(../images/icon/arrow_right.svg);
+			background-position: calc(100% - 20px) 50%;
+			background-repeat: no-repeat;
 			background-size: 24px 24px;
 			border-radius: 100px;
 			box-shadow: 0 1px 4px rgba($Black, 0.2);
@@ -161,16 +166,12 @@ section form{
 			transition: all 0.2s;
 			&:hover{
 				color: $White;
-				background-color: rgba($Orange, 0.9);
 				background-position: calc(100% - 12px) 50%;
 			}
 		}
 		.wpcf7-spinner{
 			display: block;
 			margin: 0;
-			// position: absolute;
-			// top: 0;
-			// right: 0;
 		}
 	}
 
@@ -194,6 +195,21 @@ section form{
 		}
 	}
 }
+}
+
+.sect_contact section form{
+	h3.hd_mark,
+	[data-name="acceptance"] .wpcf7-list-item label{
+		&::after{
+			background-color: $Orange;
+		}
+	}
+	.btn_submit input{
+		background-color: $Orange;
+		&:hover{
+			background-color: rgba($Orange, 0.9);
+		}
+	}
 }
 
 .wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output, .wpcf7 form.payment-required .wpcf7-response-output{

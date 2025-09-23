@@ -13,7 +13,7 @@
 		<?php the_content(); ?>
 	</div>
 	<div class="box_image md:w-1/2 md:pl-4 lg:pl-5">
-		<img src="<?php the_field('img_recruit01'); ?>" alt="メッセージイメージ">
+		<img src="<?php the_field('img_recruit01'); ?>" alt="採用イメージ">
 	</div>
 </div>
 
