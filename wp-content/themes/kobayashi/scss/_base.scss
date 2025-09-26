@@ -1,4 +1,5 @@
 @use "sass:math";
+@use "sass:color";
 @use "variables" as *;
 
 //==================================================
@@ -577,7 +578,9 @@ footer.site_footer{
 }
 }
 
-
+//==================================================
+//	Fixed button
+//==================================================
 .area_fixed{
 	right: 0;
 	bottom: rem(60);
@@ -586,23 +589,44 @@ footer.site_footer{
 		a{
 			display: block;
 			padding: rem(12) rem(12) rem(12) rem(16);
-			border-radius: 50% 0 0 50%;
+			border-radius: 100px 0 0 100px;
 			box-shadow: 0 16px 32px -4px rgba(12, 12, 13, 0.10), 0 4px 4px -4px rgba(12, 12, 13, 0.05);
+			transition: all 0.2s;
 			img{ width: rem(24); }
 		}
 	}
 	.btn_chatbot{
-		a{ background-color: $Scooter;}
+		a{ background-color: $Scooter;
+			&:hover{
+				background-color: color.change($Scooter, $lightness: 60%);
+			}
+		}
 	}
 	.btn_pagetop{
-		a{ background-color: $Picton-Blue;}
+		a{ background-color: $Picton-Blue;
+			&:hover{
+				background-color: color.change($Picton-Blue, $lightness: 72%);
+			}
+		}
 	}
-
+@include media(md){
+	.btn_chatbot, .btn_pagetop{
+		position: relative;
+		a{
+			position: relative;
+			padding-right: rem(20);
+			left: 8px;
+			&:hover{
+				left: 0;
+			}
+		}
+	}
+}
 @include media(lg){
 	bottom: rem(80);
 	.btn_chatbot, .btn_pagetop{
 		a{
-			padding: rem(16) rem(16) rem(16) rem(20);
+			padding: rem(16) rem(24) rem(16) rem(20);
 			img{ width: rem(32); }
 		}
 	}

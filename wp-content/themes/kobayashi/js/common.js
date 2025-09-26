@@ -13,7 +13,7 @@ $('section a[href^="#"]').not('.interview_tab a[href*="#interview"]').click(func
 	var target = $(href == "#" || href == "" ? 'html' : href);
 	var position = target.offset().top - adjust - 24;
 	// console.log("anker", target);
-	$('body,html').animate({scrollTop:position}, 500, 'swing');
+	$('body,html').animate({scrollTop:position}, 800, 'swing');
 	return false;
 });
 
@@ -26,6 +26,6 @@ $(window).on('load', function() {
 		target = $('#' + anchor[anchor.length - 1]);
 		// position = Math.floor(target.offset().top) - headerHeight;
 		position = target.offset().top - headerHeight;
-		$("html, body").animate({scrollTop:position}, 500);
+		$("html, body").animate({scrollTop:position}, 800);
 	}
 });

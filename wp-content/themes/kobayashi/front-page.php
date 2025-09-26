@@ -169,7 +169,7 @@ if ($faqQuery->have_posts()) :
 		<div class="box md:w-1/2">
 			<h3 class="hd_mark">サービス付き高齢者住宅「悠優」</h3>
 			<ul class="mt-0 mb-2 lg:mb-5 lg:flex lg:flex-wrap">
-				<li class="lg:w-1/2">サービス付き高齢者住宅</li>
+				<li class="lg:w-full xl:w-1/2">サービス付き高齢者住宅</li>
 				<li class="lg:w-1/2">デイサービス</li>
 				<li class="lg:w-1/2">介護タクシー</li>
 			</ul>
