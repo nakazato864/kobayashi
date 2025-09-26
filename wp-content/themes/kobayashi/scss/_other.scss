@@ -4,7 +4,7 @@
 //==================================================
 //	Privacy Policy
 //==================================================
-.sect_privacypolicy{
+.sect_privacy-policy{
 	hgroup h1{
 		&::before{
 			top: 0%;
@@ -98,6 +98,18 @@
 			@include media(lg){
 				font-size: rem(15);
 			}
+			}
+		}
+	}
+}
+
+.sect_nopage{
+	hgroup h1{
+		&::before{
+			top: 0;
+			left: -40%;
+			@include media(sm){
+				left: -25%;
 			}
 		}
 	}

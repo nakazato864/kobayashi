@@ -72,7 +72,7 @@
 		<div class="box mb-2 md:mb-0"><?php the_field('content_kaigo02'); ?></div>
 		<div class="box"><?php the_field('content_kaigo03'); ?></div>
 	</div>
-	<div class="btn_priority flex justify-center my-8"><a href="#">訪問介護の料金</a></div>
+	<div class="btn_priority flex justify-center my-8"><a href="/wp-content/uploads/2025/09/houmonkaigo-servicefee.pdf" target="_blank" rel="noopener noreferrer">訪問介護の料金</a></div>
 	<?php
 	$docName = [
 		'訪問介護運営規程',

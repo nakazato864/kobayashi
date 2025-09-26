@@ -1,3 +1,8 @@
+//Laoding
+$(window).on('load', function(){
+	$("#loading").delay(1600).fadeOut('slow');
+});
+
 // Page to Top
 $('.btn_pagetop a').click(function () {
 	$('body,html').animate({

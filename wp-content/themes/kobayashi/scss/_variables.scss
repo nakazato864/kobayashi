@@ -62,7 +62,7 @@ $baseFontsize : 16;
 }
 
 
-@keyframes fluidrotate {
+@keyframes fluidrotate01 {
 	0%, 100% {
 		border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;
 	}
@@ -83,5 +83,28 @@ $baseFontsize : 16;
 	}
 	84% {
 		border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;
+	}
+}
+@keyframes fluidrotate02 {
+	0%, 100% {
+		border-radius: 49% 51% 49% 51% / 52% 50% 50% 48%;
+	}
+	14% {
+		border-radius: 44% 56% 39% 61% / 55% 48% 52% 45%;
+	}
+	28% {
+		border-radius: 53% 47% 46% 54% / 59% 48% 52% 41%;
+	}
+	42% {
+		border-radius: 45% 55% 38% 62% / 63% 38% 62% 37%;
+	}
+	56% {
+		border-radius: 36% 64% 44% 56% / 47% 38% 62% 53%;
+	}
+	70% {
+		border-radius: 40% 60% 47% 53% / 42% 53% 47% 58%;
+	}
+	84% {
+		border-radius: 37% 63% 44% 56% / 51% 52% 48% 49%;
 	}
 }

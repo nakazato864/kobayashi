@@ -51,8 +51,13 @@ p{
 	}
 }
 ul, ol{
-	list-style-type: disc;
 	padding-left: 1.333em;
+}
+ul{
+	list-style-type: disc;
+}
+ol{
+	list-style-type: decimal;
 }
 
 hgroup{
@@ -72,7 +77,7 @@ hgroup{
 			width: 132px;
 			height: 132px;
 			// background-color: rgba($Pink, 0.2);
-			animation: fluidrotate 24s ease 0s infinite;
+			// animation: fluidrotate 24s ease 0s infinite;
 			position: absolute;
 			top: 50%;
 			transform: translateY(-50%);
@@ -195,6 +200,123 @@ a{
 	}
 }
 
+}
+
+//==================================================
+//	LOADING
+//==================================================
+.area_loading{
+	display: block;
+	position: fixed;
+	z-index: 9999;
+	width: 100%;
+	height: 100%;
+	background-color: $BG-color;
+	overflow: hidden;
+
+	.txt_loading_catch{
+		width: 76px;
+		position: absolute;
+		top: 48%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		.blur{
+			animation-delay: 0.4s;
+		}
+	}
+	.box_birds{
+		width: 140px;
+		height: 120px;
+		position: absolute;
+		top: 48%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		.box_birds_01{
+			width: 70px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			animation: fuwafuwa 3s ease-in-out infinite alternate;
+		}
+		.box_birds_02{
+			width: 68px;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			animation: fuwafuwa 2.4s ease-in-out infinite alternate;
+		}
+	}
+	.img_loading{
+		width: 100%;
+		height: calc(88/375*100vw);
+		position: absolute;
+		bottom: 0;
+		>img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		.blur{
+			animation-delay: 0.1s;
+		}
+	}
+@include media(md){
+	.txt_loading_catch{
+		width: 100px;
+	}
+	.box_birds{
+		width: 150px;
+		.box_birds_01{ width: 74px; }
+		.box_birds_02{ width: 70px; }
+	}
+	.img_loading{
+		height: 150px;
+	}
+}
+@include media(lg){
+	.txt_loading_catch{
+		width: 110px;
+	}
+	.box_birds{
+		width: 180px;
+		height: 150px;
+		.box_birds_01{ width: 90px; }
+		.box_birds_02{ width: 88px; }
+	}
+	.img_loading{
+		height: auto;
+	}
+}
+}
+
+// animation
+.blur{
+	animation-name: blurAnime;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	opacity: 0;
+}
+
+@keyframes blurAnime {
+	from{
+		filter: blur(32px);
+		opacity: 0;
+	}
+	to{
+		filter: blur(0);
+		opacity: 1;
+	}
+}
+@keyframes fuwafuwa {
+	0% {
+		transform:translate(0, 0);
+	}
+	45% {
+		transform:translate(0, -8px);
+	}
+	100% {
+		transform:translate(0, 0);
+	}
 }
 
 //==================================================
@@ -688,6 +810,7 @@ footer.site_footer{
 		h1{
 			&::before{
 				background-color: rgba($Pink, 0.2);
+				animation: fluidrotate01 25s ease 0s infinite;
 			}
 			>small{ color: $Pink; }
 		}
@@ -724,6 +847,7 @@ footer.site_footer{
 		h1{
 			&::before{
 				background-color: rgba($Scooter, 0.2);
+				animation: fluidrotate02 24s ease 0s infinite;
 			}
 			>small{ color: $Scooter; }
 		}
@@ -760,6 +884,7 @@ footer.site_footer{
 		h1{
 			&::before{
 				background-color: rgba($Orange, 0.2);
+				animation: fluidrotate01 24s ease 0s infinite;
 			}
 			>small{ color: $Orange; }
 		}
@@ -796,6 +921,7 @@ footer.site_footer{
 		h1{
 			&::before{
 				background-color: rgba($Picton-Blue, 0.2);
+				animation: fluidrotate02 25s ease 0s infinite;
 			}
 			>small{ color: $Picton-Blue; }
 		}

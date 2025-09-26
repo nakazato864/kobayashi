@@ -10,20 +10,16 @@
 get_header();
 ?>
 
-<main id="primary" class="site_main">
-
-	<section class="error-404 not-found">
-		<header class="page-header">
-			<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'kobayashi' ); ?></h1>
-		</header><!-- .page-header -->
-
-		<div class="page-content">
-			<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'kobayashi' ); ?></p>
-
-
-		</div><!-- .page-content -->
-	</section><!-- .error-404 -->
-
+<main id="primary" class="site_main page">
+<section class="sect_nopage color04 container mb-20 mx-auto px-6 md:px-4 lg:mb-[6.25rem] lg:px-5 xl:mb-[7.5rem]">
+	<hgroup class="mt-10 mb-20 text-center md:mt-16 lg:mt-20 lg:mb-[6.25rem]">
+		<h1 class="inline-block">ページがありません<small class="block">404 not found</small></h1>
+	</hgroup>
+	<div class="inner lg:w-2/3 lg:mx-auto">
+		<p class="md:text-center">お探しのページは見つかりませんでした。<br>ページが削除されたか、URLが変更された可能性があります。</p>
+		<div class="btn_priority mt-6 flex justify-center lg:mt-10"><a href="/">トップページへ</a></div>
+	</div>
+</section><!-- .error-404 -->
 </main><!-- #main -->
 
 <?php

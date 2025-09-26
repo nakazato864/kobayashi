@@ -7,6 +7,10 @@
 
 get_header();
 ?>
+<div id="loading" class="area_loading">
+	<div class="txt_loading_catch"><img class="blur" src="<?php echo esc_url(get_template_directory_uri()); ?>/images/common/catchcopy.svg" alt="住み慣れた町で、ずっと元気に"></div>
+	<div class="img_loading"><img  class="blur" src="<?php echo esc_url(get_template_directory_uri()); ?>/images/common/img_town.png" alt="街並みのイラスト"></div>
+</div>
 
 <main id="primary" class="site_main index">
 <section class="site_main_heading container overflow-x-hidden mx-auto mt-12 mb-20 px-6 md:px-4 md:flex md:items-end md:justify-between lg:px-5 lg:mb-[100px]">
